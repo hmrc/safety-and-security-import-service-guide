@@ -4,7 +4,7 @@ weight: 1
 description: Software developers, designers, product owners or business analysts. Integrate your software with VAT API for Making Tax Digital.
 ---
 
-# VAT (MTD) end-to-end service guide
+# Safety and Security Import service guide
 
 Version 6.0 issued 6 February 2019
 ***
