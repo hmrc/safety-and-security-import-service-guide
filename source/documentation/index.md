@@ -1,12 +1,12 @@
 ---
-title: VAT (MTD) End-to-End Service Guide
+title: Safety and Security Import End-to-End Service Guide
 weight: 1
 description: Software developers, designers, product owners or business analysts. Integrate your software with VAT API for Making Tax Digital.
 ---
 
-# Safety and Security Import service guide
+# Safety and security import service guide
 
-Version 6.0 issued 6 February 2019
+Version 1.0 issued 27 March 2020
 ***
 
 This guide explains how you can integrate your software with our APIs to submit VAT returns under Making Tax Digital for VAT. It shows how the APIs fit into various end-to-end user journeys. It is intended to help software developers, designers, product owners or business analysts understand how your software needs to interact with HMRC systems.
