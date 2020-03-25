@@ -9,44 +9,38 @@ description: Software developers, designers, product owners or business analysts
 Version 1.0 issued 27 March 2020
 ***
 
-This guide explains how you can integrate your software with our APIs to submit VAT returns under Making Tax Digital for VAT. It shows how the APIs fit into various end-to-end user journeys. It is intended to help software developers, designers, product owners or business analysts understand how your software needs to interact with HMRC systems.
+This guide explains how you can integrate your software with our APIs to submit an import notification known as an Entry Summary Declaration (ENS). It shows how the APIs fit into various end-to-end user journeys. It is intended to help software developers, designers, product owners or business analysts understand how your software needs to interact with HMRC systems.
 
 ## Overview
 <!-- Section owner: MTD Programme -->
 
-VAT (MTD) requires VAT registered businesses with taxable turnover above the VAT registration threshold to:
+The Import Control System (ICS) handles electronic communications between:
 
-* keep records in digital form
-* file their VAT Returns using software (via our [VAT (MTD) API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/vat-api/))
+* 	customs administrators, carriers or their appointed representatives
 
-The frequency of submitting a VAT Return (annually, quarterly or monthly) does not change under MTD.
+The process you must follow for goods being brought into the UK customs territory from the EU is for carriers to provide customs authorities with advance information, by way of ENS. 
 
-For more details see [VAT Notice 700/22](https://www.gov.uk/government/publications/vat-notice-70022-making-tax-digital-for-vat). In particular, [section 7](https://www.gov.uk/government/publications/vat-notice-70022-making-tax-digital-for-vat/vat-notice-70022-making-tax-digital-for-vat#examples-of-where-a-digital-link-is-required) shows the various options for software integration.
 
+ICS is designed to incorporate the:
+
+* lodging, handling and processing of ENS in advance of the arrival of goods
+* safety and security risk analysis and the exchange of results between member states
+* issue of a Movement Reference Number (MRN). The MRN is a customs computer system generated number that is automatically allocated after successful validation. The MRN must be issued to the carrier and, where different, the declarant
+
+The electronic ENS must be lodged before arrival into the UK - before loading in the case of maritime deep sea containerised.
+The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number. For more information, see EORI Guidance 
+ 
+For more information on ICS, see <<insert link to policy information>> 
 ## End-to-end user journeys
+ 
 <!--- Section owner: MTD Programme --->
 
 These journeys show examples of use. Journeys for businesses and agents are broken down into:
 
-  * [VAT (MTD) set up activities](documentation/set-up.html#set-up)
-  * [retrieving VAT (MTD) obligations, submitting returns and paying bills](documentation/obligations.html#obligations-and-returns)
-  * [paying VAT (MTD) penalties and interest or appealing](documentation/penalties.html#penalties-and-appeals)
-  * [VAT (MTD) close down activities](documentation/close-down.html#close-down)
 
 ## Related API documentation
 <!--- Section owner: MTD Programme --->
+ 
 
-  * [VAT (MTD) REST API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/vat-api/1.0)
-  * [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
-
-## Changelog
-<!--- Section owner: MTD Programme --->
-
-### Version 6.0
-
-6 February 2019
-
-What changed:
-
-* [Added documentation for Retrieve VAT liabilities endpoint](documentation/obligations.html#view-vat-liabilities)
-* [Added documentation for Retrieve VAT payments endpoint](documentation/obligations.html#view-vat-payments)
+<!-- add the change log here -->
+ 
