@@ -19,7 +19,6 @@ This guide explains how you can integrate your software with our APIs to submit 
 
 It shows how the APIs fit into various end-to-end user journeys. It is intended to help software developers, designers, product owners or business analysts understand how your software needs to interact with HMRC systems.
  
-
 The Import Control System (ICS) handles digital communications between: 
 
 * customs administrators
@@ -38,8 +37,8 @@ The ENS must be lodged before goods arrive into the UK - before loading in the c
 
 The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number. 
 
-For more information, see EORI Guidance  <<insert link to policy information>> 
-For more information on ICS, see <<insert link to policy information>> 
+For more information, see EORI Guidance  ** insert link to policy information **
+For more information on ICS, see ** insert link to policy information **
 
  
 ## End-to-end user journeys
@@ -60,7 +59,7 @@ downloading and acknowledging messages (accepted or rejected)
 <!-- add the change log here -->
 ## Changelog
 
-# Version 6.0
+## Version 6.0
 
 27 March 2020
 
