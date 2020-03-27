@@ -10,7 +10,6 @@ weight: 2
 Software Vendors will be required to register standard applications with HMRC.  End users will be required to have an ICS enrolment assigned to their Government Gateway Credential.
 
 <img src="figures/ics-authentication.svg" alt="Authentication for Software vendors process diagram" style="width:520px;" />
-
 <a href="figures/ics-authentication.svg" target="blank">Open the Authentication for Software vendors process diagram in a new tab</a>.
 
 The end user authenticates directly with us using their Government Gateway account, and grants authority to your software for specific scopes.
