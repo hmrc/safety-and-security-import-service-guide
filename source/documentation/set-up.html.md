@@ -20,9 +20,9 @@ Full details and examples can be found on the HMRC Developer Hub:
 
 [https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints)
 
-## CSP Flow
+## Community System Provider's
 
-CSP’s may register privileged applications with HMRC, which is in line with the practice previously used for CDS.
+Community System Provider's (CSP’s) may register privileged applications with HMRC, which is in line with the practice previously used for CDS (Customs Declaration Service).
 
 Privileged Applications don’t require each end user to have Government Gateway credentials.
 
