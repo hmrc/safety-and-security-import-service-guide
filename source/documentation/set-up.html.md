@@ -15,7 +15,7 @@ A user access_token expires after 4 hours and will need to be refreshed.
 
 Full details and examples can be found on the HMRC Developer Hub:
 
-https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints
+[https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints)
 
 ## CSP FLOW
 
@@ -26,16 +26,10 @@ Privileged Applications don’t require each end user to have Government Gateway
 Following Registration, the credentials you are supplied with can be used to generate a Time-based One-Time Password (TOTP) code, which can then be exchanged for an access_token.
 
 Submit and acknowledge flow
-
 Link to documentation about do not load/rim rules etc
-
 Content
-
 Advanced notification
-
 Content
-
-
 Endpoints 
 
 
@@ -43,7 +37,7 @@ Endpoints
 
 Our test environment will allow you to test your software.  You will need to authenticate through our API platform.
 
-The test environment will allow you to submit
+The test environment will allow you to submit:
 
 * ENS Declarations
 * ENS Amendments
@@ -87,12 +81,11 @@ You can use this endpoint to create and submit a new entry declaration.
 There is no SOAP header and the body envelope remains the same.  It starts with a 315 element at the top level.
 
 The message sender field contains your EORI
+
 ```
 <MesSenMES3>
 ```
 The response returned to confirm that we have received your submission will contain a correlation Id which you can use to obtain your outcomes and acknowledge the outcomes that you get.
-
-
 
 ## Submit a ENS Amendment
 
@@ -110,6 +103,7 @@ WHAT HAPPENS IF IT IS UNSUCESSFUL?
 This endpoint allows you to retrieve a batch of unacknowledged outcomes.  
 
 In this example there are two outcomes:  
+
 ```
 entryDeclarationResponses>
  <response>
@@ -124,25 +118,26 @@ entryDeclarationResponses>
 </entryDeclarationResponses>
 ```
 
-Both have a <correlationId> with responses received with the original declaration.
+Both have a ```<correlationId>``` with responses received with the original declaration.
 
-The link within the <link> element can be used to fetch the detail or acknowledge the outcome.
+The link within the ```<link>``` element can be used to fetch the detail or acknowledge the outcome.
+
 ```
 <link>/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004</link>
 ```
 Outcomes that are successful or accepted will have a movement reference number inside the response.
+
 ```
 <MRN>10GB08I01234567891</MRN>
 ```
 Those that don’t have a movement reference number will be rejections:
+
 ```
  <response>
    <correlationId>0JRF7UncAqr004</correlationId>
    <link>/customs/imports/entry-summary-declarations/outcomes/0987654321</link>
  </response>
 ```
-
-
 
 ## Fetch outcome
 
@@ -151,6 +146,7 @@ This endpoint is used to retrieve the details for an individual entry summary de
 The path parameter contains the correlation ID that was returned to the declaration itself.
 
 The returned XML is in the same format:
+
 ```
 <outcomeResponse>
    <response>
@@ -171,7 +167,9 @@ The returned XML is in the same format:
    <acknowledgement method='DELETE' href='/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004'/>
 </outcomeResponse>
 ```
+
 A successful accepted outcome contains a movement reference number with the <DocNumHEA5> element.
+ 
 ```
 <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
 ```
