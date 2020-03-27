@@ -14,8 +14,8 @@ Software Vendors will be required to register standard applications with HMRC.  
 <a href="figures/ics-authentication.svg" target="blank">Open the Authentication for Software vendors process diagram in a new tab</a>.
 
 The end user authenticates directly with us using their Government Gateway account, and grants authority to your software for specific scopes.
-We then issue an OAuth 2.0 access_token that is specific to the end user. Your application passes the access token in subsequent API requests to user-restricted endpoints.
-A user access_token expires after 4 hours and will need to be refreshed.
+We then issue an OAuth 2.0 ```access_token``` that is specific to the end user. Your application passes the access token in subsequent API requests to user-restricted endpoints.
+A user ```access_token``` expires after 4 hours and will need to be refreshed.
 
 Full details and examples can be found on the HMRC Developer Hub:
 
@@ -65,7 +65,7 @@ All responses returned are in XML.
 Our test environment will not allow performance or load testing.  You can use a latency header for delayed responses in milliseconds.
 
 
-## API endpoints in the new ICS system
+## API endpoints
 
 There are five endpoints, two are for submitting:
 
@@ -84,7 +84,7 @@ You can use this endpoint to create and submit a new entry declaration.
 
 There is no SOAP header and the body envelope remains the same.  It starts with a 315 element at the top level.
 
-The message sender field contains your EORI
+The message sender element contains your EORI
 
 ```
 <MesSenMES3>
@@ -97,9 +97,7 @@ You can use this endpoint to submit an amendment to an existing entry summary de
 
 It contains an element <docNumHEA5> which holds the movement reference number given to you as an outcome.  The movement reference number must match the PUT path parameter.
 
-A successful call will return a HTTP 200 response.
-
-WHAT HAPPENS IF IT IS UNSUCESSFUL?  
+A successful call will return a HTTP 200 response.  If the call is not successful a HTTP 400 response with the error.xml is returned. 
 
 
 ## Get unacknowledged outcomes
