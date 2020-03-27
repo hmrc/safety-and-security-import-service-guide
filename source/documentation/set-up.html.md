@@ -107,7 +107,7 @@ This endpoint allows you to retrieve a batch of unacknowledged outcomes.
 In this example there are two outcomes:  
 
 ```
-entryDeclarationResponses>
+<entryDeclarationResponses>
  <response>
    <correlationId>0JRF7UncK0t004</correlationId>
    <link>/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004</link>
