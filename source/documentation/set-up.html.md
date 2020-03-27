@@ -9,6 +9,9 @@ weight: 2
 
 Software Vendors will be required to register standard applications with HMRC.  End users will be required to have an ICS enrolment assigned to their Government Gateway Credential.
 
+<img src="figures/ics-authentication.svg" alt="Authentication for Software vendors process diagram" style="width:520px;" />
+<a href="figures/ics-authentication.svg" target="blank">Open the Authentication for Software vendors process diagram in a new tab</a>.
+
 The end user authenticates directly with us using their Government Gateway account, and grants authority to your software for specific scopes.
 We then issue an OAuth 2.0 access_token that is specific to the end user. Your application passes the access token in subsequent API requests to user-restricted endpoints.
 A user access_token expires after 4 hours and will need to be refreshed.
@@ -17,7 +20,7 @@ Full details and examples can be found on the HMRC Developer Hub:
 
 [https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints)
 
-## CSP FLOW
+## CSP Flow
 
 CSP’s may register privileged applications with HMRC, which is in line with the practice previously used for CDS.
 
