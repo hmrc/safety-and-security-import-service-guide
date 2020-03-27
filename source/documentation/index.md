@@ -59,9 +59,7 @@ downloading and acknowledging messages (accepted or rejected)
 <!-- add the change log here -->
 ## Changelog
 
-## Version 6.0
+## Version 1.0
 
-27 March 2020
-
-What changed:
+Updates to the API will be listed here in future.
  
