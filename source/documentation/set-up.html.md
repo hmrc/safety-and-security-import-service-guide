@@ -21,6 +21,10 @@ Full details and examples can be found on the HMRC Developer Hub:
 
 [https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints)
 
+
+
+
+
 ## Community System Provider's
 
 Community System Provider's (CSP’s) may register privileged applications with HMRC, which is in line with the practice previously used for CDS (Customs Declaration Service).
@@ -74,8 +78,6 @@ There are five endpoints, two are for submitting:
 * get a list of outcomes
 * fetch a single outcome
 * acknowledge an outcome
-
-
 
 ## Submitting a new ENS declaration
 
