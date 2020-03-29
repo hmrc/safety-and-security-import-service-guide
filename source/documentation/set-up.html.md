@@ -41,6 +41,10 @@ Following Registration, the credentials you are supplied with can be used to gen
 </br>
 <a href="figures/advanced-notification.svg" target="blank">Open the Advanced notifications process diagram in a new tab</a>.
 
+## Do Not Load (DNL) messages  
+
+For deep-sea containerised shipments only, a DNL message (IE351) may be issued. This will be sent to the person submitting the declaration.
+
 ## Test environment
 
 Our test environment will allow you to test your software.  You will need to authenticate through our API platform.
