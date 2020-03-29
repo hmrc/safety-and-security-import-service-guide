@@ -53,13 +53,14 @@ downloading and acknowledging messages (accepted or rejected)
 
 ## Related API documentation
 <!--- Section owner: MTD Programme --->
-[Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
-[Test Fraud Prevention Headers API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/1.0)
+
+* [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
+* [Test Fraud Prevention Headers API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/1.0)
 
 <!-- add the change log here -->
 ## Changelog
 
-## Version 1.0
+### Version 1.0
 
-Updates to the API will be listed here in future.
+Updates to the API or endpoints will be listed here in future.
  
