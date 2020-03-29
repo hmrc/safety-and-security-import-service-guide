@@ -72,7 +72,6 @@ There are five endpoints, two are for submitting:
 * submit a new ENS declaration
 * submit an ENS amendment to an existing declaration
 * get a list of outcomes
-
 * fetch a single outcome
 * acknowledge an outcome
 
