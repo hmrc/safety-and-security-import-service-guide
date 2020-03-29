@@ -21,12 +21,6 @@ Full details and examples can be found on the HMRC Developer Hub:
 
 [https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints)
 
-
-<img src="figures/ics-authentication.svg" alt="Authentication for Software vendors process diagram" style="width:720px;" />
-</br>
-<a href="figures/ics-authentication.svg" target="blank">Open the Authentication for Software vendors process diagram in a new tab</a>.
-
-
 ## Community System Provider's
 
 Community System Provider's (CSP’s) may register privileged applications with HMRC, which is in line with the practice previously used for CDS (Customs Declaration Service).
@@ -34,13 +28,6 @@ Community System Provider's (CSP’s) may register privileged applications with 
 Privileged Applications don’t require each end user to have Government Gateway credentials.
 
 Following Registration, the credentials you are supplied with can be used to generate a Time-based One-Time Password (TOTP) code, which can then be exchanged for an access_token.
-
-Submit and acknowledge flow
-Link to documentation about do not load/rim rules etc
-Content
-Advanced notification
-Content
-Endpoints 
 
 ## Submit and acknowledge a E313 and E315
 
@@ -103,14 +90,11 @@ You can use this endpoint to create and submit a new entry declaration.
 
 There is no SOAP header and the body envelope remains the same.  It starts with a 315 element at the top level.
 
-The message sender element contains your EORI
+The message sender element  ```<MesSenMES3>``` contains your EORI
 
-```
-<MesSenMES3>
-```
 The response returned to confirm that we have received your submission will contain a correlation Id which you can use to obtain your outcomes and acknowledge the outcomes that you get.
 
-## Submit a ENS Amendment
+## Submitting a ENS amendment
 
 You can use this endpoint to submit an amendment to an existing entry summary declaration.
 
@@ -119,11 +103,11 @@ It contains an element <docNumHEA5> which holds the movement reference number gi
 A successful call will return a HTTP 200 response.  If the call is not successful a HTTP 400 response with the error.xml is returned. 
 
 
-## Get unacknowledged outcomes
+## Getting unacknowledged outcomes
 
 This endpoint allows you to retrieve a batch of unacknowledged outcomes.  
 
-In this example there are two outcomes:  
+In this example there are two outcomes each contained within the ```<response>``` body: 
 
 ```
 <entryDeclarationResponses>
@@ -141,17 +125,17 @@ In this example there are two outcomes:
 
 Both have a ```<correlationId>``` with responses received with the original declaration.
 
-The link within the ```<link>``` element can be used to fetch the detail or acknowledge the outcome.
+The link within the ```<link>``` element can be used to fetch the detail or acknowledge the outcome:
 
 ```
 <link>/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004</link>
 ```
-Outcomes that are successful or accepted will have a movement reference number inside the response.
+Outcomes that are successful or accepted will have a movement reference number inside the response:
 
 ```
 <MRN>10GB08I01234567891</MRN>
 ```
-Those that don’t have a movement reference number will be rejections:
+Those that do not have a movement reference number will be rejections:
 
 ```
  <response>
@@ -160,7 +144,7 @@ Those that don’t have a movement reference number will be rejections:
  </response>
 ```
 
-## Fetch outcome
+## Fetching an outcome
 
 This endpoint is used to retrieve the details for an individual entry summary declaration.
 
@@ -195,7 +179,7 @@ A successful accepted outcome contains a movement reference number with the <Doc
 <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
 ```
 
-## Acknowledge outcome
+## Acknowledging outcome
 
 This endpoint allows you to acknowledge an existing outcome.  
 
