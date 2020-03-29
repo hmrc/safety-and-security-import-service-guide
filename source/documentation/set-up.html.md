@@ -42,6 +42,17 @@ Advanced notification
 Content
 Endpoints 
 
+## Submit and acknowledge a E313 and E315
+
+<img src="figures/submit-ack-IE315-IE313.svg" alt="Submit and acknowledge a E313 and E315 process diagram" style="width:720px;" />
+</br>
+<a href="figures/submit-ack-IE315-IE313.svg" target="blank">Open the Submit and acknowledge a E313 and E315 process diagram in a new tab</a>.
+
+## Advanced notifications
+
+<img src="figures/advanced-notification.svg" alt="Authentication for Advanced notifications process diagram" style="width:720px;" />
+</br>
+<a href="figures/advanced-notification.svg" target="blank">Open the Advanced notifications process diagram in a new tab</a>.
 
 ## Test environment
 
@@ -81,9 +92,9 @@ There are five endpoints, two are for submitting:
 * fetch a single outcome
 * acknowledge an outcome
 
-HOLDER - get list for advanced notification
-HOLDER - get advanced notification using submission ID
-HOLDER - acknowledge the response
+* HOLDER - get list for advanced notification
+* HOLDER - get advanced notification using submission ID
+* HOLDER - acknowledge the response
 
 
 ## Submitting a new ENS declaration
