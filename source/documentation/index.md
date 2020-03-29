@@ -1,7 +1,7 @@
 ---
 title: Safety and Security Import End-to-End Service Guide
 weight: 1
-description: Software developers, designers, product owners or business analysts. Integrate your software with VAT API for Making Tax Digital.
+description: Software developers, designers, product owners or business analysts.
 ---
 
 # Safety and security import service guide
@@ -37,8 +37,8 @@ The ENS must be lodged before goods arrive into the UK - before loading in the c
 
 The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number. 
 
-For more information, see EORI Guidance  ** insert link to policy information **
-For more information on ICS, see ** insert link to policy information **
+For more information, see EORI Guidance  [insert link to policy information]
+For more information on ICS, see [insert link to policy information]
 
  
 ## End-to-end user journeys
@@ -46,8 +46,7 @@ For more information on ICS, see ** insert link to policy information **
 These journeys show examples of use. Journeys for businesses and agents are broken down into:
 
 * authentication
-* submitting new ENS IE315 or amendment IE313 and receiving
-downloading and acknowledging messages (accepted or rejected)
+* submitting new ENS IE315 or amendment IE313 and receiving, downloading and acknowledging messages (accepted or rejected)
 * receiving, downloading and Advanced (IE351) acknowledging messages 
 
 
