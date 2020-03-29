@@ -22,7 +22,9 @@ Full details and examples can be found on the HMRC Developer Hub:
 [https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints](https://developer.service.hmrc.gov.uk/api-documentation/docs/authorisation/user-restricted-endpoints)
 
 
-
+<img src="figures/ics-authentication.svg" alt="Authentication for Software vendors process diagram" style="width:720px;" />
+</br>
+<a href="figures/ics-authentication.svg" target="blank">Open the Authentication for Software vendors process diagram in a new tab</a>.
 
 
 ## Community System Provider's
@@ -69,7 +71,7 @@ All responses returned are in XML.
 Our test environment will not allow performance or load testing.  You can use a latency header for delayed responses in milliseconds.
 
 
-## API endpoints
+## API Reference
 
 There are five endpoints, two are for submitting:
 
@@ -78,6 +80,11 @@ There are five endpoints, two are for submitting:
 * get a list of outcomes
 * fetch a single outcome
 * acknowledge an outcome
+
+HOLDER - get list for advanced notification
+HOLDER - get advanced notification using submission ID
+HOLDER - acknowledge the response
+
 
 ## Submitting a new ENS declaration
 
