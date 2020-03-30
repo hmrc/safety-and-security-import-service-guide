@@ -8,8 +8,10 @@ weight: 2
 This video gives some background to the ICS uplift and API endpoints.
 <br>
 <br>
-<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/watch?v=2BMGrX8Axo8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/watch?v=2BMGrX8Axo8&feature=youtu.be" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <br>
+
+[ICS uplift video](https://www.youtube.com/watch?v=2BMGrX8Axo8&feature=youtu.be)
 
 ## Authentication for Software vendors
 
