@@ -6,6 +6,8 @@ description: Software developers, designers, product owners or business analysts
 
 # API Reference
 
+## Endpoint overview 
+
 There are five endpoints, two are for submitting:
 
 * submit a new ENS declaration
@@ -114,10 +116,20 @@ A successful accepted outcome contains a movement reference number with the <Doc
 <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
 ```
 
-## Acknowledging outcome
+## Acknowledging an outcome
 
 This endpoint allows you to acknowledge an existing outcome.  
 
 The path parameter is the same that used for a fetch however the HTTP method is a DELETE rather than a GET
 
 After using the endpoint the outcome will no longer be fetchable and no longer appear in the list of outcomes.
+
+## Risking responses
+
+If we use the ```simulateRiskingReponse``` header for an IE315 and if it has  ```accept``` value in it, an IE328 is returned when the fetch API is called.
+
+Similarly for a IE313 you will get a an IE304 success response when the fetch API is called.
+
+If we change the value to ```reject``` we will receive an IE316 and IE305 rejection response when the fetch API is called.
+
+
