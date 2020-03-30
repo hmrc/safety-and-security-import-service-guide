@@ -5,4 +5,4 @@ weight: 6
 
 # Support model
 
-INSERT CONTENT
+The support model is currently being developed and will be updated here when available.
