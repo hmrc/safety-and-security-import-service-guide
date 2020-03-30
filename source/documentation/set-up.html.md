@@ -13,7 +13,7 @@ This video gives some background to the ICS uplift and API endpoints.
 
 [ICS uplift video](https://www.youtube.com/watch?v=2BMGrX8Axo8&feature=youtu.be)
 
-## Authentication for Software vendors
+## Advanced notification Do Not Load (DNL) messages
 
 Software Vendors will be required to register standard applications with HMRC.  End users will be required to have an ICS enrolment assigned to their Government Gateway Credential.
 
@@ -31,7 +31,7 @@ Full details and examples can be found on the HMRC Developer Hub:
 
 ## Community System Provider's
 
-Community System Provider's (CSP’s) may register privileged applications with HMRC, which is in line with the practice previously used for CDS (Customs Declaration Service).
+Community System Provider's (CSP) may register privileged applications with HMRC, which is in line with the practice previously used for CDS (Customs Declaration Service).
 
 Privileged Applications don’t require each end user to have Government Gateway credentials.
 
@@ -49,7 +49,7 @@ Following Registration, the credentials you are supplied with can be used to gen
 </br>
 <a href="figures/advanced-notification.svg" target="blank">Open the Advanced notifications process diagram in a new tab</a>.
 
-## Do Not Load (DNL) messages  
+## Advanced notificaiton Do Not Load (DNL) messages  
 
 For deep-sea containerised shipments only, a DNL message (IE351) may be issued. This will be sent to the person submitting the declaration.
 
