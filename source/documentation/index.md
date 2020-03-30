@@ -42,12 +42,15 @@ These journeys show examples of use. Journeys for businesses and agents are brok
 * submitting new ENS IE315 or amendment IE313 and receiving, downloading and acknowledging messages (accepted or rejected)
 * receiving, downloading and Advanced (IE351) acknowledging messages 
 
+## Terms of use
+
+Your application must comply with our [terms of use](https://developer.service.hmrc.gov.uk/api-documentation/docs/terms-of-use). You must accept the terms of use before we issue your application's production credentials.
 
 ## Related API documentation
 <!--- Section owner: MTD Programme --->
 
 * [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
-* [Test Fraud Prevention Headers API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/txm-fph-validator-api/1.0)
+
 
 <!-- add the change log here -->
 ## Changelog
