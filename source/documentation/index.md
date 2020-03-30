@@ -32,9 +32,7 @@ The ENS must be lodged before goods arrive into the UK - before loading in the c
 
 The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number. 
 
-For more information, see EORI Guidance  [insert link to policy information]</br>
-For more information on ICS, see [insert link to policy information]
-
+For more information, see [EORI Guidance](https://www.gov.uk/eori)</br>
  
 ## End-to-end user journeys
 
