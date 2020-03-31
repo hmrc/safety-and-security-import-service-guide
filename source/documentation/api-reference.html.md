@@ -96,7 +96,9 @@ A successful call will return a HTTP 200 response.
 
 If the call is not successful a HTTP 400 response is returned with an XML error message.
 
-## Getting unacknowledged outcomes
+## Getting outcomes
+
+### Getting an unacknowledged outcome
 
 This endpoint allows you to retrieve a batch of unacknowledged outcomes.
 
@@ -145,7 +147,7 @@ Those that do not have a movement reference number will be rejections, for examp
  </response>
 ```
 
-## Fetching an outcome
+### Getting an outcome
 
 This endpoint is used to retrieve the details for an individual Entry Summary Declaration (ENS).
 
@@ -184,7 +186,7 @@ A successful accepted outcome contains a movement reference number within the ``
 <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
 ```
 
-## Acknowledging an outcome
+### Acknowledging an outcome
 
 This endpoint allows you to acknowledge an existing outcome.
 
