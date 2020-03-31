@@ -201,7 +201,7 @@ After calling this endpoint the outcome will no longer be retrievable and will n
 
 ## Risking responses
 
-If we use the ```simulateRiskingReponse``` header for Entry Summary Declaration (IE315) and it has ```accept``` value in it, an IE328 is returned when the fetch API is called.
+If we use the ```simulateRiskingReponse``` header for a Entry Summary Declaration (IE315) and it has ```accept``` value in it, a IE328 is returned when the fetch API is called.
 
 Similarly, for an entry summary amendment (IE313) a IE304 success response is returned when the fetch API is called.
 
