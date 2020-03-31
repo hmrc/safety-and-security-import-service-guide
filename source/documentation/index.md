@@ -18,7 +18,8 @@ It shows how the APIs fit into various end-to-end user journeys. It is also inte
 The Safety and Security system handles digital communications between:
 
 * customs administrators
-* carriers or their appointed representatives 
+* carriers or their appointed representatives
+
 You must provide the UK customs authorities with advance information by submitting an ENS before you bring goods into the UK.
 
 The Safety and Security system is designed to incorporate the:
