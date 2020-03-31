@@ -10,11 +10,11 @@ description: Software developers, designers, product owners or business analysts
 
 There are five endpoints, two are for submitting:
 
-* submit a new ENS declaration
-* submit an ENS amendment to an existing declaration
-* get a list of outcomes
-* get a single outcome
-* acknowledge an outcome
+* [submit a new ENS declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0)
+* [submit an ENS amendment to an existing declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0)
+* [get a list of outcomes](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
+* [get a single outcome](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
+* [acknowledge an outcome](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
 
 The following endpoints are currently in development:
 
