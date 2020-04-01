@@ -78,7 +78,7 @@ You can use this endpoint to submit an amendment to an existing ENS.
 </ie:CC313A>
 ```
 
-The element ```<DocNumHEA5>``` holds the movement reference number given to you as an outcome. The movement reference number must match the ```{mrn}`` in the PUT path parameter.
+The element ```<DocNumHEA5>``` holds the Movement Reference Number given to you as an outcome. The Movement Reference Number must match the ```{mrn}``` in the PUT path parameter:
 
 ```
 PUT /customs/imports/declarations/{mrn}
@@ -100,7 +100,7 @@ If the call is not successful a HTTP 400 response is returned with an XML error 
 
 ### Getting an unacknowledged outcome
 
-This endpoint allows you to retrieve a batch of unacknowledged outcomes.
+This endpoint allows you to retrieve a list of unacknowledged outcomes.
 
 In this example there are two outcomes each contained within the ```<response>``` element:
 
@@ -132,13 +132,13 @@ The link within the ```<link>``` element can be used to fetch the detail or ackn
 <link>/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004</link>
 ```
 
-Outcomes that are successful or accepted will have a movement reference number inside the response:
+Outcomes that are successful or accepted will have a Movement Reference Number inside the response:
 
 ```
 <MRN>10GB08I01234567891</MRN>
 ```
 
-Those that do not have a movement reference number will be rejections, for example:
+Those that do not have a Movement Reference Number will be rejections, for example:
 
 ```
  <response>
@@ -157,7 +157,7 @@ The path parameter contains the correlation ID that was returned in response to 
 GET /customs/imports/outcomes/{correlationId}
 ```
 
-The returned XML is in the same format and the current system:
+The returned XML is in the same format as the current system:
 
 ```
 <outcomeResponse>
@@ -180,7 +180,7 @@ The returned XML is in the same format and the current system:
 </outcomeResponse>
 ```
 
-A successful accepted outcome contains a movement reference number within the ```<DocHumHEA5>``` element.
+A successful accepted outcome contains a Movement Reference Number within the ```<DocHumHEA5>``` element.
  
 ```
 <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
