@@ -34,17 +34,17 @@ Privileged applications do not require each end user to have Government Gateway 
 Following registration, the credentials you are supplied with can be used to generate a Time-based One-Time Password (TOTP) code which is exchanged for an ```access_token```.
 
 
-## Submit and acknowledge a E313 and E315
+## Submit and acknowledge a IE313 and IE315
 
-<img src="figures/submit-ack-IE315-IE313.svg" alt="Submit and acknowledge a E313 and E315 process diagram" style="width:720px;" />
+<img src="figures/submit-ack-IE315-IE313.svg" alt="Submit and acknowledge a IE313 and IE315 process diagram" style="width:720px;" />
 </br>
-<a href="figures/submit-ack-IE315-IE313.svg" target="blank">Open the Submit and acknowledge a E313 and E315 process diagram in a new tab</a>.
+<a href="figures/submit-ack-IE315-IE313.svg" target="blank">Open the submit and acknowledge a IE313 and IE315 process diagram in a new tab</a>.
 
 ## Advanced notifications
 
-<img src="figures/advanced-notification.svg" alt="Authentication for Advanced notifications process diagram" style="width:720px;" />
+<img src="figures/advanced-notification.svg" alt="Authentication for advanced notifications process diagram" style="width:720px;" />
 </br>
-<a href="figures/advanced-notification.svg" target="blank">Open the Advanced notifications process diagram in a new tab</a>.
+<a href="figures/advanced-notification.svg" target="blank">Open the advanced notifications process diagram in a new tab</a>.
 
 ## Advanced notification Do Not Load (DNL) messages
 
