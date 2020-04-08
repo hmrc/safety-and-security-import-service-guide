@@ -7,7 +7,6 @@ weight: 6
 
 ## Field descriptions
 
-<p>--- title: XML Reference | Safety and Security Import Declarations end-to-end Service Guide weight: 2 --- # XML Reference ## Field descriptions</p>
 <table><colgroup><col /><col /><col /></colgroup>
 <tbody>
 <tr>
