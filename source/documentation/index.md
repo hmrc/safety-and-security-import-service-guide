@@ -38,8 +38,7 @@ These journeys show examples of use. Journeys for businesses and agents are brok
 
 * authentication
 * submitting a new ENS (IE315), amending a ENS (IE313) and receiving, downloading and acknowledging messages (accepted or rejected)
-* receiving, downloading Advanced (IE351) acknowledgement messages
-
+* receiving, downloading and acknowledging Advanced Intervention (IE351) notification messages
 
 ## Terms of use
 
