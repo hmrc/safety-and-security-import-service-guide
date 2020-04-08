@@ -198,6 +198,7 @@ DELETE /customs/imports/outcomes/{correlationId}
 
 After calling this endpoint the outcome will no longer be retrievable and will no longer appear in the list of outcomes.
 
+## Advanced notifications - IE351
 
 ### Get a list of advanced notifications - IE351
 
@@ -209,7 +210,7 @@ The path parameter is:
 GET /customs/imports/notifications
 ```
 
-A successful response will return a list of correlation IDs contained in the ```<correlationId>``` element:
+A successful response will return a correlation IDs contained within the ```<response>``` element. In this example two correlation IDs have been returned.
 
 ```
 <advancedNotifications>
@@ -234,7 +235,7 @@ This endpoint retrieves a notification for given correlation ID.
 GET /customs/imports/notifications/{correlationId}
 ```
 
-A successful response returns:
+The XML returned is the same as the current system. An example of a successful response:
 
 ```
 <cc3:CC351A xmlns:cc3="http://ics.dgtaxud.ec/CC351A">
@@ -318,16 +319,17 @@ A successful response returns:
 </cc3:CC351A>
 ```
 
-A HTTP 404 response indicates there are no details currently available for this correlation ID.
+A HTTP 404 response indicates there are no details currently available for the given correlation ID.
 
 ### Acknowledge a response - IE351 
 
-This endpoint allows a developer to acknowledge the receiving of the advanced notification response for a given correlation ID.
+This endpoint allows a developer to acknowledge the receipt of an advanced notification response for a given correlation ID.
 
 ```
 DELETE /customs/imports/entry-summary-declarations/interventions/{correlationId}
 ```
-A HTTP 200 response indicates the acknowledgement request has been accepted.  A HTTP 404 response indicates there are no details available for this correlation ID
+
+A HTTP 200 response indicates the acknowledgement request has been accepted.  A HTTP 404 response indicates there are no details available for the given correlation ID.
 
 
 ## Risking responses
