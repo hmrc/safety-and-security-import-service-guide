@@ -198,7 +198,7 @@ DELETE /customs/imports/outcomes/{correlationId}
 
 After calling this endpoint the outcome will no longer be retrievable and will no longer appear in the list of outcomes.
 
-## Advanced notifications - IE351
+## Advanced notifications (Do not load) - IE351
 
 ### Get a list of advanced notifications - IE351
 
@@ -210,7 +210,7 @@ The path parameter is:
 GET /customs/imports/notifications
 ```
 
-A successful response will return a correlation IDs contained within the ```<response>``` element. In this example two correlation IDs have been returned.
+A successful response will return a correlation ID contained within the ```<response>``` element. In this example two correlation IDs have been returned.
 
 ```
 <advancedNotifications>
@@ -321,12 +321,12 @@ The XML returned is the same as the current system. An example of a successful r
 
 A HTTP 404 response indicates there are no details currently available for the given correlation ID.
 
-### Acknowledge a response - IE351 
+### Acknowledge a notification - IE351 
 
 This endpoint allows a developer to acknowledge the receipt of an advanced notification response for a given correlation ID.
 
 ```
-DELETE /customs/imports/entry-summary-declarations/interventions/{correlationId}
+DELETE /customs/imports/notifications/{correlationId}
 ```
 
 A HTTP 200 response indicates the acknowledgement request has been accepted.  A HTTP 404 response indicates there are no details available for the given correlation ID.
