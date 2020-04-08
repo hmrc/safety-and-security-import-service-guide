@@ -16,11 +16,11 @@ There are five endpoints, two are for submitting:
 * [get a single outcome](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
 * [acknowledge an outcome](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
 
-The following endpoints are currently in development:
+There are 3 endpoints for notifications.
 
-* get list for advanced notification
-* get advanced notification using submission ID
-* acknowledge a response
+* [get list a list of advanced notifications](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_get-a-list-of-notifications_get_accordion)
+* [get advanced notification using submission ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_retrieve-a-notification_get_accordion)
+* [acknowledge a notification](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_acknowledge-a-notification_delete_accordion)
 
 
 
@@ -197,6 +197,137 @@ DELETE /customs/imports/outcomes/{correlationId}
 ```
 
 After calling this endpoint the outcome will no longer be retrievable and will no longer appear in the list of outcomes.
+
+
+### Get a list of advanced notifications - IE351
+
+This endpoint allows a developer to retrieve a list of advanced notifications that are yet to be acknowledged.
+
+The path parameter is:
+
+```
+GET /customs/imports/notifications
+```
+
+A successful response will return a list of correlation IDs contained in the ```<correlationId>``` element:
+
+```
+<advancedNotifications>
+  <response>
+    <correlationId>1234567890</correlationId>
+    <link>/customs/imports/notifications/1234567890</link>
+  </response>
+  <response>
+    <correlationId>0987654321</correlationId>
+    <link>/customs/imports/notifications/0987654321</link>
+  </response>
+</advancedNotifications>
+```
+
+A HTTP 204 response indicates there are no messages available to download.
+
+### Retrieve a notification - IE351
+
+This endpoint retrieves a notification for given correlation ID.
+
+```
+GET /customs/imports/notifications/{correlationId}
+```
+
+A successful response returns:
+
+```
+<cc3:CC351A xmlns:cc3="http://ics.dgtaxud.ec/CC351A">
+  <MesSenMES3>GBCD1234/1234567890</MesSenMES3>
+  <MesRecMES6>GBC123</MesRecMES6>
+  <DatOfPreMES9>030211</DatOfPreMES9>
+  <TimOfPreMES10>0123</TimOfPreMES10>
+  <MesIdeMES19>ABC123</MesIdeMES19>
+  <MesTypMES20>CC313A</MesTypMES20>
+  <CorIdeMES25>ABC123</CorIdeMES25>
+  <HEAHEA>
+    <RefNumHEA4>ABCD1234</RefNumHEA4>
+    <DocNumHEA5>12AB3C4D5E6F7G8H90</DocNumHEA5>
+    <TraModAtBorHEA76>4</TraModAtBorHEA76>
+    <NatHEA001>GB</NatHEA001>
+    <IdeOfMeaOfTraCroHEA85>ABC123</IdeOfMeaOfTraCroHEA85>
+    <TotNumOfIteHEA305>42</TotNumOfIteHEA305>
+    <ComRefNumHEA>ABC123</ComRefNumHEA>
+    <ConRefNumHEA>ABC123</ConRefNumHEA>
+    <NotDatTimHEA104>200302111234</NotDatTimHEA104>
+    <DecRegDatTimHEA115>200302111234</DecRegDatTimHEA115>
+    <DecSubDatTimHEA118>200302111234</DecSubDatTimHEA118>
+  </HEAHEA>
+  <GOOITEGDS>
+    <IteNumGDS7>1</IteNumGDS7>
+    <ComRefNumGIM1>ABC123</ComRefNumGIM1>
+    <PRODOCDC2>
+      <DocTypDC21>AB12</DocTypDC21>
+      <DocRefDC23>ABC123</DocRefDC23>
+      <DocRefDCLNG>en</DocRefDCLNG>
+    </PRODOCDC2>
+    <CONNR2>
+      <ConNumNR21>ABC123</ConNumNR21>
+    </CONNR2>
+    <IDEMEATRAGI970>
+      <NatIDEMEATRAGI973>EN</NatIDEMEATRAGI973>
+      <IdeMeaTraGIMEATRA971>ABC123</IdeMeaTraGIMEATRA971>
+      <IdeMeaTraGIMEATRA972LNG>en</IdeMeaTraGIMEATRA972LNG>
+    </IDEMEATRAGI970>
+  </GOOITEGDS>
+  <CUSOFFLON>
+    <RefNumCOL1>ES000055</RefNumCOL1>
+  </CUSOFFLON>
+  <TRAREP>
+    <NamTRE1>ABC123</NamTRE1>
+    <StrAndNumTRE1>ABC123</StrAndNumTRE1>
+    <PosCodTRE1>ABC123</PosCodTRE1>
+    <CitTRE1>ABC123</CitTRE1>
+    <CouCodTRE1>EN</CouCodTRE1>
+    <TRAREPLNG>en</TRAREPLNG>
+    <TINTRE1>YZ^</TINTRE1>
+  </TRAREP>
+  <PERLODSUMDEC>
+    <NamPLD1>ABC123</NamPLD1>
+    <StrAndNumPLD1>ABC123</StrAndNumPLD1>
+    <PosCodPLD1>ABC123</PosCodPLD1>
+    <CitPLD1>ABC123</CitPLD1>
+    <CouCodPLD1>EN</CouCodPLD1>
+    <PERLODSUMDECLNG>en</PERLODSUMDECLNG>
+    <TINPLD1>YZ^</TINPLD1>
+  </PERLODSUMDEC>
+  <CUSOFFFENT730>
+    <RefNumCUSOFFFENT731>AB3C4D5E</RefNumCUSOFFFENT731>
+    <ExpDatOfArrFIRENT733>200302111234</ExpDatOfArrFIRENT733>
+  </CUSOFFFENT730>
+  <TRACARENT601>
+    <NamTRACARENT604>ABC123</NamTRACARENT604>
+    <StrNumTRACARENT607>ABC123</StrNumTRACARENT607>
+    <PstCodTRACARENT606>ABC123</PstCodTRACARENT606>
+    <CtyTRACARENT603>ABC123</CtyTRACARENT603>
+    <CouCodTRACARENT605>EN</CouCodTRACARENT605>
+    <TRACARENT601LNG>en</TRACARENT601LNG>
+    <TINTRACARENT602>YZ^</TINTRACARENT602>
+  </TRACARENT601>
+  <CUSINT632>
+    <IteNumConCUSINT668>1</IteNumConCUSINT668>
+    <CusIntCodCUSINT665>ABCD</CusIntCodCUSINT665>
+    <CusIntTexCUSINT666>ABC12</CusIntTexCUSINT666>
+    <CusIntTexCUSINT667LNG>en</CusIntTexCUSINT667LNG>
+  </CUSINT632>
+</cc3:CC351A>
+```
+
+A HTTP 404 response indicates there are no details currently available for this correlation ID.
+
+### Acknowledge a response - IE351 
+
+This endpoint allows a developer to acknowledge the receiving of the advanced notification response for a given correlation ID.
+
+```
+DELETE /customs/imports/entry-summary-declarations/interventions/{correlationId}
+```
+A HTTP 200 response indicates the acknowledgement request has been accepted.  A HTTP 404 response indicates there are no details available for this correlation ID
 
 
 ## Risking responses
