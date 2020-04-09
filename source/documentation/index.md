@@ -6,7 +6,7 @@ description: Software developers, designers, product owners or business analysts
 
 # Safety and security import declarations service guide
 
-Version 1.0 issued 31 March 2020
+Version 1.1 issued 8 April 2020
 ***
 
 ## Overview
@@ -53,7 +53,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 <!-- add the change log here -->
 ## Changelog
 
-### Version 1.0
+### Version 1.1
 
-Updates to the API will be listed here in future.
+* advanced notifications endpoints description and field descriptions added to service guide
  
