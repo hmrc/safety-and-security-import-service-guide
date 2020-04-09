@@ -32,7 +32,7 @@ weight: 6
 <p>RefNumHEA4</p>
 </td>
 <td>
-<p>Local Reference number - his field needs to be unique for each 'Person Lodging' and is validated using the 'Person Lodging' EORI for declarations which have been submitted</p>
+<p>Local Reference number - this field needs to be unique for each 'Person Lodging' and is validated using the 'Person Lodging' EORI for declarations which have been submitted</p>
 </td>
 </tr>
 <tr>
