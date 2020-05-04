@@ -100,7 +100,7 @@ If the call is not successful a HTTP 400 response is returned with an XML error 
 
 ### Getting an unacknowledged outcome
 
-This endpoint allows you to retrieve a list of unacknowledged outcomes.
+This endpoint allows you to retrieve a list of unacknowledged outcomes. 
 
 In this example there are two outcomes each contained within the ```<response>``` element:
 
@@ -149,7 +149,7 @@ Those that do not have a Movement Reference Number will be rejections, for examp
 
 ### Getting an outcome
 
-This endpoint is used to retrieve the details for an individual Entry Summary Declaration (ENS).
+This endpoint is used to retrieve the details for an individual Entry Summary Declaration (ENS).  You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
 
 The path parameter contains the correlation ID that was returned in response to the  declaration itself:
 
@@ -202,7 +202,7 @@ After calling this endpoint the outcome will no longer be retrievable and will n
 
 ### Get a list of advanced notifications - IE351
 
-This endpoint allows a developer to retrieve a list of advanced notifications that are yet to be acknowledged.
+This endpoint allows a developer to retrieve a list of advanced notifications that are yet to be acknowledged.  You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
 
 The path parameter is:
 
