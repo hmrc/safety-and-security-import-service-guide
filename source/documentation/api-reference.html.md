@@ -53,6 +53,7 @@ The response returned confirms that we have received your submission and will co
        <CorrelationId>0JRF7UncK0t004</CorrelationId>
    </ns:ResponseData>
 </ns:SuccessResponse>
+
 You can use the correlation ID to obtain your outcomes and acknowledge any outcomes that you get.
 ```
 
@@ -87,10 +88,11 @@ PUT /customs/imports/declarations/{mrn}
 A successful call will return a HTTP 200 response. 
 
 ```
-<ns:SuccessResponse TestInLive="false" xmlns:xd="http://www.w3.org/2000/09/xmldsig#" xmlns:ns="http://www.hmrc.gov.uk/successresponse/2">
-   <ns:ResponseData>
-       <CorrelationId>0JRF7UncAqr004</CorrelationId>
-   </ns:ResponseData>
+<ns:SuccessResponse xmlns:xd="http://www.w3.org/2000/09/xmldsig#" xmlns:ns="http://www.hmrc.gov.uk/successresponse/2"
+                    xmlns="http://www.govtalk.gov.uk/enforcement/ICS/responsedata/7">
+    <ns:ResponseData>
+        <CorrelationId>87491122139921</CorrelationId>
+    </ns:ResponseData>
 </ns:SuccessResponse>
 ```
 
@@ -108,12 +110,12 @@ In this example there are two outcomes each contained within the ```<response>``
 <entryDeclarationResponses>
  <response>
    <correlationId>0JRF7UncK0t004</correlationId>
-   <link>/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004</link>
+   <link>/customs/imports/outcomes/0JRF7UncK0t004</link>
    <MRN>10GB08I01234567891</MRN>
  </response>
  <response>
    <correlationId>0JRF7UncAqr004</correlationId>
-   <link>/customs/imports/entry-summary-declarations/outcomes/0987654321</link>
+   <link>/customs/imports/outcomes/0987654321</link>
  </response>
 </entryDeclarationResponses>
 ```
@@ -129,7 +131,7 @@ Both have a ```<correlationId>``` element containing the correlation ID received
 The link within the ```<link>``` element can be used to fetch the detail or acknowledge the outcome:
 
 ```
-<link>/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004</link>
+<link>/customs/imports/outcomes/0JRF7UncK0t004</link>
 ```
 
 Outcomes that are successful or accepted will have a Movement Reference Number inside the response:
@@ -143,7 +145,7 @@ Those that do not have a Movement Reference Number will be rejections, for examp
 ```
  <response>
    <correlationId>0JRF7UncAqr004</correlationId>
-   <link>/customs/imports/entry-summary-declarations/outcomes/0987654321</link>
+   <link>/customs/imports/outcomes/0987654321</link>
  </response>
 ```
 
@@ -176,7 +178,7 @@ The returned XML is in the same format as the current system:
            ...
        </CC328A>
    </response>
-   <acknowledgement method='DELETE' href='/customs/imports/entry-summary-declarations/outcomes/0JRF7UncK0t004'/>
+   <acknowledgement method='DELETE' href='/customs/imports/outcomes/0JRF7UncK0t004'/>
 </outcomeResponse>
 ```
 
