@@ -65,10 +65,11 @@ It will also allow you to:
 * acknowledge responses
 * list unacknowledged responses
 
-The test environment will also validate submissions to make sure the schema is valid.
+The test environment will also validate submissions against the schema and business rules.
 
 The stub will also simulate any risking responses returning the movement reference number (MRN) and error code scenarios.
-Our test environment allows you to use a header to test accept responses and with a different value test rejected responses. If no header is used, the submission is sent through and no response is sent back.
+
+Out test environment allows you to use a header to test accept/accepted responses and, with a different value, test reject/rejected responses.
 
 All responses returned are in XML as in the current system.
 
