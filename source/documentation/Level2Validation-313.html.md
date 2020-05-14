@@ -978,7 +978,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCO1/NamCO17
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -986,7 +986,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCO1/StrAndNumCO122
 
-**Scenario**: [Street and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -994,7 +994,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCO1/PosCodCO123
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1002,7 +1002,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCO1/CitCO124
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1010,7 +1010,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCO1/CouCO125
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1018,7 +1018,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCE1/NamCE17
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1026,7 +1026,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCE1/StrAndNumCE122
 
-**Scenario**: [Street and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1034,7 +1034,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCE1/PosCodCE123
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1042,7 +1042,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCE1/CitCE124
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1050,7 +1050,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACONCE1/CouCE125
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1058,7 +1058,7 @@ APIs.
 
 **Context Element:** /CC313A/NOTPAR670/NamNOTPAR672
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1066,7 +1066,7 @@ APIs.
 
 **Context Element:** /CC313A/NOTPAR670/StrNumNOTPAR673
 
-**Scenario**: [Street and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1074,7 +1074,7 @@ APIs.
 
 **Context Element:** /CC313A/NOTPAR670/PosCodNOTPAR676
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1082,7 +1082,7 @@ APIs.
 
 **Context Element:** /CC313A/NOTPAR670/CitNOTPAR674
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1090,7 +1090,7 @@ APIs.
 
 **Context Element:** /CC313A/NOTPAR670/CouCodNOTPAR675
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1098,7 +1098,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCO2/NamCO27
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1106,7 +1106,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCO2/StrAndNumCO222
 
-**Scenario**: [Street name and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street name and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1114,7 +1114,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCO2/PosCodCO223
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1122,7 +1122,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCO2/CitCO224
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1130,7 +1130,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCO2/CouCO225
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1138,7 +1138,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCE2/NamCE27
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1146,7 +1146,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCE2/StrAndNumCE222
 
-**Scenario**: [Street name and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street name and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1154,7 +1154,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCE2/PosCodCE223
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1162,7 +1162,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCE2/CitCE224
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1170,7 +1170,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/TRACONCE2/CouCE225
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1178,7 +1178,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/PRTNOT640/NamPRTNOT642
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1186,7 +1186,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/PRTNOT640/StrNumPRTNOT646
 
-**Scenario**: [Street name and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street name and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1194,7 +1194,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/PRTNOT640/PstCodPRTNOT644
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1202,7 +1202,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/PRTNOT640/CtyPRTNOT643
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1210,7 +1210,7 @@ APIs.
 
 **Context Element:** /CC313A/GOOITEGDS/PRTNOT640/CouCodGINOT647
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1298,7 +1298,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACARENT601/NamTRACARENT604
 
-**Scenario**: [Name] should not be present if GB [TIN] is present].
+**Scenario**: [Name] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1306,7 +1306,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACARENT601/StrNumTRACARENT607
 
-**Scenario**: [Street and number] should not be present if GB [TIN] is present].
+**Scenario**: [Street and number] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1314,7 +1314,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACARENT601/PstCodTRACARENT606
 
-**Scenario**: [Postal code] should not be present if GB [TIN] is present].
+**Scenario**: [Postal code] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1322,7 +1322,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACARENT601/CtyTRACARENT603
 
-**Scenario**: [City] should not be present if GB [TIN] is present].
+**Scenario**: [City] should not be present if GB [TIN] is present.
 
 ---
 
@@ -1330,7 +1330,7 @@ APIs.
 
 **Context Element:** /CC313A/TRACARENT601/CouCodTRACARENT605
 
-**Scenario**: [Country code] should not be present if GB [TIN] is present].
+**Scenario**: [Country code] should not be present if GB [TIN] is present.
 
 ---
 
