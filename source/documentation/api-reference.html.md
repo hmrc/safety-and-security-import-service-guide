@@ -72,7 +72,6 @@ You can use this endpoint to submit an amendment to an existing ENS.
  <MesRecMES6>GBC123</MesRecMES6>
  <DatOfPreMES9>030211</DatOfPreMES9>
  <TimOfPreMES10>0123</TimOfPreMES10>
- <PriMES15>A</PriMES15>
  <MesIdeMES19>ABC123</MesIdeMES19>
  <MesTypMES20>CC313A</MesTypMES20>
  <CorIdeMES25>ABC123</CorIdeMES25>
