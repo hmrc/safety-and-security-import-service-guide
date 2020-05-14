@@ -18,8 +18,8 @@ There are five endpoints, two are for submitting:
 
 There are 3 endpoints for notifications.
 
-* [get list a list of advanced notifications](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_get-a-list-of-notifications_get_accordion)
-* [get advanced notification using submission ID](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_retrieve-a-notification_get_accordion)
+* [get a list of advanced notifications](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_get-a-list-of-notifications_get_accordion)
+* [get a single advanced notification](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_retrieve-a-notification_get_accordion)
 * [acknowledge a notification](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_acknowledge-a-notification_delete_accordion)
 
 
@@ -27,6 +27,11 @@ There are 3 endpoints for notifications.
 ## Submitting a new ENS declaration
 
 You can use this endpoint to create and submit a new Entry Summary Declaration (ENS).
+
+```
+POST /customs/imports/declarations
+```
+
 There is no SOAP header and the body envelope XML remains the same. It starts with a ```<ie:CC315A>``` element at the top level.
 
 ```
@@ -48,7 +53,7 @@ The message sender element ```<MesSenMES3>``` contains your EORI. It is the same
 The response returned confirms that we have received your submission and will contain a correlation ID:
 
 ```
-<ns:SuccessResponse TestInLive="false" xmlns:xd="http://www.w3.org/2000/09/xmldsig#" xmlns:ns="http://www.hmrc.gov.uk/successresponse/2">
+<ns:SuccessResponse xmlns:ns="http://www.hmrc.gov.uk/successresponse/2" xmlns="http://www.govtalk.gov.uk/enforcement/ICS/responsedata/7">
    <ns:ResponseData>
        <CorrelationId>0JRF7UncK0t004</CorrelationId>
    </ns:ResponseData>
@@ -88,8 +93,7 @@ PUT /customs/imports/declarations/{mrn}
 A successful call will return a HTTP 200 response. 
 
 ```
-<ns:SuccessResponse xmlns:xd="http://www.w3.org/2000/09/xmldsig#" xmlns:ns="http://www.hmrc.gov.uk/successresponse/2"
-                    xmlns="http://www.govtalk.gov.uk/enforcement/ICS/responsedata/7">
+<ns:SuccessResponse xmlns:ns="http://www.hmrc.gov.uk/successresponse/2" xmlns="http://www.govtalk.gov.uk/enforcement/ICS/responsedata/7">
     <ns:ResponseData>
         <CorrelationId>87491122139921</CorrelationId>
     </ns:ResponseData>
@@ -100,9 +104,13 @@ If the call is not successful a HTTP 400 response is returned with an XML error 
 
 ## Getting outcomes
 
-### Getting an unacknowledged outcome
+### Getting a list of outcomes
 
-This endpoint allows you to retrieve a list of unacknowledged outcomes. 
+This endpoint allows you to retrieve a list of unacknowledged outcomes. You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
+
+```
+GET /customs/imports/outcomes
+```
 
 In this example there are two outcomes each contained within the ```<response>``` element:
 
@@ -151,7 +159,7 @@ Those that do not have a Movement Reference Number will be rejections, for examp
 
 ### Getting an outcome
 
-This endpoint is used to retrieve the details for an individual Entry Summary Declaration (ENS).  You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
+This endpoint is used to retrieve the details for an individual Entry Summary Declaration (ENS).
 
 The path parameter contains the correlation ID that was returned in response to the  declaration itself:
 
@@ -163,22 +171,22 @@ The returned XML is in the same format as the current system:
 
 ```
 <outcomeResponse>
-   <response>
-       <CC328A>
-           <MesSenMES3>GB000012340003/1234567890</MesSenMES3>
-           <MesRecMES6>GB000012340003/1234567890</MesRecMES6>
-           <MesIdeMES19>MSUI11235227</MesIdeMES19>
-           <MesTypMES20>CC328A</MesTypMES20>
-           <CorIdeMES25>0JRF7UncK0t004</CorIdeMES25>
-           <HEAHEA>
-               ...
-               <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
-               ...
-           </HEAHEA>
-           ...
-       </CC328A>
-   </response>
-   <acknowledgement method='DELETE' href='/customs/imports/outcomes/0JRF7UncK0t004'/>
+  <response>
+    <cc3:CC328A>
+      <MesSenMES3>GB000012340003/1234567890</MesSenMES3>
+      <MesRecMES6>GB000012340003/1234567890</MesRecMES6>
+      <MesIdeMES19>MSUI11235227</MesIdeMES19>
+      <MesTypMES20>CC328A</MesTypMES20>
+      <CorIdeMES25>0JRF7UncK0t004</CorIdeMES25>
+      <HEAHEA>
+        ...
+        <DocNumHEA5>10GB08I01234567891</DocNumHEA5>
+        ...
+      </HEAHEA>
+      ...
+    </cc3:CC328A>
+  </response>
+  <acknowledgement method='DELETE' href='/customs/imports/outcomes/0JRF7UncK0t004'/>
 </outcomeResponse>
 ```
 
@@ -205,8 +213,6 @@ After calling this endpoint the outcome will no longer be retrievable and will n
 ### Get a list of advanced notifications - IE351
 
 This endpoint allows a developer to retrieve a list of advanced notifications that are yet to be acknowledged.  You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
-
-The path parameter is:
 
 ```
 GET /customs/imports/notifications
@@ -240,85 +246,27 @@ GET /customs/imports/notifications/{correlationId}
 The XML returned is the same as the current system. An example of a successful response:
 
 ```
-<cc3:CC351A xmlns:cc3="http://ics.dgtaxud.ec/CC351A">
-  <MesSenMES3>GBCD1234/1234567890</MesSenMES3>
-  <MesRecMES6>GBC123</MesRecMES6>
-  <DatOfPreMES9>030211</DatOfPreMES9>
-  <TimOfPreMES10>0123</TimOfPreMES10>
-  <MesIdeMES19>ABC123</MesIdeMES19>
-  <MesTypMES20>CC313A</MesTypMES20>
-  <CorIdeMES25>ABC123</CorIdeMES25>
-  <HEAHEA>
-    <RefNumHEA4>ABCD1234</RefNumHEA4>
-    <DocNumHEA5>12AB3C4D5E6F7G8H90</DocNumHEA5>
-    <TraModAtBorHEA76>4</TraModAtBorHEA76>
-    <NatHEA001>GB</NatHEA001>
-    <IdeOfMeaOfTraCroHEA85>ABC123</IdeOfMeaOfTraCroHEA85>
-    <TotNumOfIteHEA305>42</TotNumOfIteHEA305>
-    <ComRefNumHEA>ABC123</ComRefNumHEA>
-    <ConRefNumHEA>ABC123</ConRefNumHEA>
-    <NotDatTimHEA104>200302111234</NotDatTimHEA104>
-    <DecRegDatTimHEA115>200302111234</DecRegDatTimHEA115>
-    <DecSubDatTimHEA118>200302111234</DecSubDatTimHEA118>
-  </HEAHEA>
-  <GOOITEGDS>
-    <IteNumGDS7>1</IteNumGDS7>
-    <ComRefNumGIM1>ABC123</ComRefNumGIM1>
-    <PRODOCDC2>
-      <DocTypDC21>AB12</DocTypDC21>
-      <DocRefDC23>ABC123</DocRefDC23>
-      <DocRefDCLNG>en</DocRefDCLNG>
-    </PRODOCDC2>
-    <CONNR2>
-      <ConNumNR21>ABC123</ConNumNR21>
-    </CONNR2>
-    <IDEMEATRAGI970>
-      <NatIDEMEATRAGI973>EN</NatIDEMEATRAGI973>
-      <IdeMeaTraGIMEATRA971>ABC123</IdeMeaTraGIMEATRA971>
-      <IdeMeaTraGIMEATRA972LNG>en</IdeMeaTraGIMEATRA972LNG>
-    </IDEMEATRAGI970>
-  </GOOITEGDS>
-  <CUSOFFLON>
-    <RefNumCOL1>ES000055</RefNumCOL1>
-  </CUSOFFLON>
-  <TRAREP>
-    <NamTRE1>ABC123</NamTRE1>
-    <StrAndNumTRE1>ABC123</StrAndNumTRE1>
-    <PosCodTRE1>ABC123</PosCodTRE1>
-    <CitTRE1>ABC123</CitTRE1>
-    <CouCodTRE1>EN</CouCodTRE1>
-    <TRAREPLNG>en</TRAREPLNG>
-    <TINTRE1>YZ^</TINTRE1>
-  </TRAREP>
-  <PERLODSUMDEC>
-    <NamPLD1>ABC123</NamPLD1>
-    <StrAndNumPLD1>ABC123</StrAndNumPLD1>
-    <PosCodPLD1>ABC123</PosCodPLD1>
-    <CitPLD1>ABC123</CitPLD1>
-    <CouCodPLD1>EN</CouCodPLD1>
-    <PERLODSUMDECLNG>en</PERLODSUMDECLNG>
-    <TINPLD1>YZ^</TINPLD1>
-  </PERLODSUMDEC>
-  <CUSOFFFENT730>
-    <RefNumCUSOFFFENT731>AB3C4D5E</RefNumCUSOFFFENT731>
-    <ExpDatOfArrFIRENT733>200302111234</ExpDatOfArrFIRENT733>
-  </CUSOFFFENT730>
-  <TRACARENT601>
-    <NamTRACARENT604>ABC123</NamTRACARENT604>
-    <StrNumTRACARENT607>ABC123</StrNumTRACARENT607>
-    <PstCodTRACARENT606>ABC123</PstCodTRACARENT606>
-    <CtyTRACARENT603>ABC123</CtyTRACARENT603>
-    <CouCodTRACARENT605>EN</CouCodTRACARENT605>
-    <TRACARENT601LNG>en</TRACARENT601LNG>
-    <TINTRACARENT602>YZ^</TINTRACARENT602>
-  </TRACARENT601>
-  <CUSINT632>
-    <IteNumConCUSINT668>1</IteNumConCUSINT668>
-    <CusIntCodCUSINT665>ABCD</CusIntCodCUSINT665>
-    <CusIntTexCUSINT666>ABC12</CusIntTexCUSINT666>
-    <CusIntTexCUSINT667LNG>en</CusIntTexCUSINT667LNG>
-  </CUSINT632>
-</cc3:CC351A>
+<notificationResponse>
+  <response>
+    <cc3:CC351A>
+      <MesSenMES3>GBCD1234/1234567890</MesSenMES3>
+      <MesRecMES6>GBC123</MesRecMES6>
+      <DatOfPreMES9>030211</DatOfPreMES9>
+      <TimOfPreMES10>0123</TimOfPreMES10>
+      <MesIdeMES19>ABC123</MesIdeMES19>
+      <MesTypMES20>CC313A</MesTypMES20>
+      <CorIdeMES25>ABC123</CorIdeMES25>
+      ...
+      <CUSINT632>
+        <IteNumConCUSINT668>1</IteNumConCUSINT668>
+        <CusIntCodCUSINT665>A001</CusIntCodCUSINT665>
+        <CusIntTexCUSINT666>ABC12</CusIntTexCUSINT666>
+        <CusIntTexCUSINT667LNG>en</CusIntTexCUSINT667LNG>
+      </CUSINT632>
+    </cc3:CC351A>
+  </response>
+  <acknowledgement method='DELETE' href='/customs/imports/notifications/0JRF7UncK0t004'/>
+</notificationResponse>
 ```
 
 A HTTP 404 response indicates there are no details currently available for the given correlation ID.
