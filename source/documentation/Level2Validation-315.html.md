@@ -23,9 +23,9 @@ No outcome will be available for a submission with validation errors.
 A success response will be received for a submission that has passed schema and business validation. 
 Further risking checks will then be performed before an outcome and possible notification will
 be made available via the 
-[outcomes](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
+[outcomes](/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
 and the
-[notifications](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_get-a-list-of-notifications_get_accordion)
+[notifications](/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0)
 APIs.
 
 ## Business validation errors

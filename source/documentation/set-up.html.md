@@ -68,6 +68,8 @@ It will also allow you to:
 The test environment will also validate submissions against the schema and business rules.
 
 The stub will also simulate any risking responses returning the movement reference number (MRN) and error code scenarios.
+(For details of risking response simulations available, see 
+[submissions](/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0) API.)
 
 Out test environment allows you to use a header to test accept/accepted responses and, with a different value, test reject/rejected responses.
 

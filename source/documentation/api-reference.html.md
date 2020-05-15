@@ -8,19 +8,22 @@ description: Software developers, designers, product owners or business analysts
 
 ## Endpoint overview 
 
-There are five endpoints, two are for submitting:
+There are two endpoints for submitting:
 
-* [submit a new ENS declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0)
-* [submit an ENS amendment to an existing declaration](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0)
-* [get a list of outcomes](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
-* [get a single outcome](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
-* [acknowledge an outcome](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
+* [submit a new ENS declaration](/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0#_submit-a-new-entry-summary-declaration-ens_post_accordion)
+* [submit an ENS amendment to an existing declaration](/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0#_amend-an-existing-entry-summary-declaration-ens_put_accordion)
 
-There are 3 endpoints for notifications.
+There are three endpoints for getting outcomes of submissions:
 
-* [get a list of advanced notifications](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_get-a-list-of-notifications_get_accordion)
-* [get a single advanced notification](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_retrieve-a-notification_get_accordion)
-* [acknowledge a notification](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_acknowledge-a-notification_delete_accordion)
+* [get a list of outcomes](/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0#_get-a-list-of-outcomes_get_accordion)
+* [get a single outcome](/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0#_retrieve-an-outcome_get_accordion)
+* [acknowledge an outcome](/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0#_acknowledge-an-outcome_delete_accordion)
+
+There are three endpoints for notifications:
+
+* [get a list of advanced notifications](/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_get-a-list-of-notifications_get_accordion)
+* [get a single advanced notification](/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_retrieve-a-notification_get_accordion)
+* [acknowledge a notification](/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0#_acknowledge-a-notification_delete_accordion)
 
 
 
@@ -211,35 +214,41 @@ After calling this endpoint the outcome will no longer be retrievable and will n
 
 ### Get a list of advanced notifications - IE351
 
-This endpoint allows a developer to retrieve a list of advanced notifications that are yet to be acknowledged.  You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
+This endpoint allows a developer to retrieve a list of advanced notifications that are yet to be acknowledged.  
+You will need to ensure that you retrieve a list of unacknowledged advanced notifications as well as outcomes.
 
 ```
 GET /customs/imports/notifications
 ```
 
-A successful response will return a correlation ID contained within the ```<response>``` element. In this example two correlation IDs have been returned.
+A successful response will return a list of identifiers for notifications to download
+within the ```<response>``` element. Each item in the list contains a Notification ID that uniquely 
+identifies the notification, along with the Correlation ID that identifies the ENS submission.
+In this example two Notification IDs have been returned.
 
 ```
 <advancedNotifications>
   <response>
     <correlationId>1234567890</correlationId>
-    <link>/customs/imports/notifications/1234567890</link>
+    <notificationId>1D45fQ563</notificationId>
+    <link>/customs/imports/notifications/1D45fQ563</link>
   </response>
   <response>
     <correlationId>0987654321</correlationId>
-    <link>/customs/imports/notifications/0987654321</link>
+    <notificationId>ABx4414f4</notificationId>
+    <link>/customs/imports/notifications/ABx4414f4</link>
   </response>
 </advancedNotifications>
 ```
 
-A HTTP 204 response indicates there are no messages available to download.
+A HTTP 204 response indicates there are no notifications available to download.
 
 ### Retrieve a notification - IE351
 
-This endpoint retrieves a notification for given correlation ID.
+This endpoint retrieves a notification for given Notification ID.
 
 ```
-GET /customs/imports/notifications/{correlationId}
+GET /customs/imports/notifications/{notificationId}
 ```
 
 The XML returned is the same as the current system. An example of a successful response:
@@ -268,25 +277,17 @@ The XML returned is the same as the current system. An example of a successful r
 </notificationResponse>
 ```
 
-A HTTP 404 response indicates there are no details currently available for the given correlation ID.
+A HTTP 404 response indicates there are no details currently available for the given Notification ID.
 
 ### Acknowledge a notification - IE351 
 
-This endpoint allows a developer to acknowledge the receipt of an advanced notification response for a given correlation ID.
+This endpoint allows a developer to acknowledge the receipt of an advanced notification response for a given Notification ID.
 
 ```
-DELETE /customs/imports/notifications/{correlationId}
+DELETE /customs/imports/notifications/{notificationId}
 ```
 
-A HTTP 200 response indicates the acknowledgement request has been accepted.  A HTTP 404 response indicates there are no details available for the given correlation ID.
+A HTTP 200 response indicates the acknowledgement request has been accepted.  A HTTP 404 response indicates there are no details available for the given Notification ID.
 
-
-## Risking responses
-
-If we use the ```simulateRiskingReponse``` header for a Entry Summary Declaration (IE315) and it has ```accept``` value in it, a IE328 is returned when the fetch API is called.
-
-Similarly, for an entry summary amendment (IE313) a IE304 success response is returned when the fetch API is called.
-
-If we change the value to ```reject``` we will receive an IE316 and IE305 rejection response when the fetch API is called.
 
 
