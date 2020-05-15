@@ -49,6 +49,8 @@ Your application must comply with our [terms of use](https://developer.service.h
 
 * [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
 
+* Additional information can be found at
+ [Import Control System: support for software developers](https://www.gov.uk/government/collections/import-control-system-support-for-software-developers))
 
 <!-- add the change log here -->
 ## Changelog
