@@ -172,7 +172,7 @@ GET /customs/imports/outcomes/{correlationId}
 The returned XML is in the same format as the current system:
 
 ```
-<outcomeResponse>
+<outcomeResponse xmlns:cc3="http://ics.dgtaxud.ec/CC328A">
   <response>
     <cc3:CC328A>
       <MesSenMES3>GB000012340003/1234567890</MesSenMES3>
@@ -254,7 +254,7 @@ GET /customs/imports/notifications/{notificationId}
 The XML returned is the same as the current system. An example of a successful response:
 
 ```
-<notificationResponse>
+<notificationResponse xmlns:cc3="http://ics.dgtaxud.ec/CC351A">
   <response>
     <cc3:CC351A>
       <MesSenMES3>GBCD1234/1234567890</MesSenMES3>
