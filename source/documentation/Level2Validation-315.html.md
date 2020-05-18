@@ -9,9 +9,9 @@ When an ENS declaration is submitted using the
 [ENS submission API](/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0), 
 two types of validation are performed:
 
-* The subission XML body is checked against the XML schema 
+1. The submission  XML body is checked against the XML schema 
 [http://ics.dgtaxud.ec/CC315A](/api-documentation/docs/api/download/import-control-entry-declaration-store/1.0/schemas/CC315A-v11-1.xsd).
-* The submission is checked against a number of business rules.
+2. The submission is checked against a number of business rules.
  
 Schema and business validation errors will result in a 400 (Bad Request) response to the submission with
 a response body listing the errors.
@@ -42,7 +42,7 @@ APIs.
 
 **Context Element:** /CC315A
 
-**Scenario**: Each [Item number] is unique throughout the declaration The items shall be numbered in a sequential fashion, starting from '1' for the first item and incrementing the numbering by '1' for each following item.
+**Scenario**: Each [Item number] is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from '1' for the first item and incrementing the numbering by '1' for each following item.
 
 ---
 
