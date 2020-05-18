@@ -9,12 +9,13 @@ When an ENS declaration amendment is submitted using the
 [ENS submission API](/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0), 
 two types of validation are performed:
 
-* The subission XML body is checked against the XML schema 
+1. The submission XML body is checked against the XML schema 
 [http://ics.dgtaxud.ec/CC313A](/api-documentation/docs/api/download/import-control-entry-declaration-store/1.0/schemas/CC313A-v11-1.xsd).
-* The submission is checked against a number of business rules.
+2. The submission is checked against a number of business rules.
  
 Schema and business validation errors will result in a 400 (Bad Request) response to the submission with
 a response body listing the errors.
+
 Schema validation errors have error codes in the 4000-4999 range whereas 
 business validation errors (listed below) have error codes mainly in the 8000-8999 range. 
 
@@ -22,7 +23,7 @@ No outcome will be available for a submission with validation errors.
 
 A success response will be received for a submission that has passed schema and business validation. 
 Further risking checks will then be performed before an outcome and possible notification will
-be made available via the 
+be made available through the 
 [outcomes](/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0)
 and the
 [notifications](/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0)
@@ -42,7 +43,7 @@ APIs.
 
 **Context Element:** /CC313A
 
-**Scenario**: Each [Item number] is unique throughout the declaration The items shall be numbered in a sequential fashion, starting from '1' for the first item and incrementing the numbering by '1' for each following item.
+**Scenario**: Each [Item number] is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from '1' for the first item and incrementing the numbering by '1' for each following item.
 
 ---
 
