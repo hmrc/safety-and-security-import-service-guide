@@ -71,7 +71,7 @@ The stub will also simulate any risking responses returning the movement referen
 (For details of risking response simulations available, see 
 [submissions](/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0) API.)
 
-Out test environment allows you to use a header to test accept/accepted responses and, with a different value, test reject/rejected responses.
+Our test environment allows you to use a header to test accept responses and with a different value test reject responses.
 
 All responses returned are in XML as in the current system.
 
