@@ -35,7 +35,7 @@ You can use this endpoint to create and submit a new Entry Summary Declaration (
 POST /customs/imports/declarations
 ```
 
-There is no SOAP header and the body envelope XML remains the same. It starts with a ```<ie:CC315A>``` element at the top level.
+There is no SOAP header and the XML body envelope remains the same. It starts with a ```<ie:CC315A>``` element at the top level.
 
 ```
 <ie:CC315A xmlns:ie="http://ics.dgtaxud.ec/CC315A">
@@ -61,9 +61,9 @@ The response returned confirms that we have received your submission and will co
        <CorrelationId>0JRF7UncK0t004</CorrelationId>
    </ns:ResponseData>
 </ns:SuccessResponse>
+```
 
 You can use the correlation ID to obtain your outcomes and acknowledge any outcomes that you get.
-```
 
 ## Submitting a ENS amendment
 
@@ -114,7 +114,7 @@ This endpoint allows you to retrieve a list of unacknowledged outcomes. You will
 GET /customs/imports/outcomes
 ```
 
-In this example there are two outcomes each contained within the ```<response>``` element:
+In this example, there are two outcomes each contained within the ```<response>``` element:
 
 ```
 <entryDeclarationResponses>
