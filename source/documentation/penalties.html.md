@@ -1,6 +1,6 @@
 ---
 title: Set up | Safety and Security Import Declarations end-to-end Service Guide
-weight: 5
+weight: 9
 ---
 
 # Penalties
