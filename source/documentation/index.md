@@ -31,6 +31,9 @@ The MRN is a Customs computer system-generated number that is automatically allo
 
 The ENS must be lodged before goods arrive into the UK and before loading in the case of maritime deep-sea containerised shipping.
 The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number.  For more information, see [EORI Guidance](https://www.gov.uk/eori)</br>
+
+> The Safety and Security system cannot be used for Entry Summary Declarations where the office of first entry is 
+> a Northern Ireland port.
  
 ## End-to-end user journeys
 
