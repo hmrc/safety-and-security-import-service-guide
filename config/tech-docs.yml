@@ -5,6 +5,8 @@ host: https://docs.developer.service.hmrc.gov.uk
 show_govuk_logo: true
 service_name: HMRC Developer Hub
 service_link: https://developer.service.hmrc.gov.uk/api-documentation
+phase: Beta
+phaseFeedbackLink: https://docs.google.com/forms/d/e/1FAIpQLScfhcgi1FkjRhJyIHfubi0VyUaIfB1iaGVSv3g4WjOtJV0Erw/viewform
 
 # Links to show on right-hand-side of header
 header_links:
