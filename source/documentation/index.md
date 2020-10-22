@@ -4,11 +4,6 @@ weight: 1
 description: Software developers, designers, product owners or business analysts.
 ---
 
-# Safety and security import declarations service guide
-
-Version 1.3 issued 18 May 2020
-***
-
 ## Overview
  
 This guide explains how you can integrate your software with our APIs to submit an import notification known as an Entry Summary Declaration (ENS).
