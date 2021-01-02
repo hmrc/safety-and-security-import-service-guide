@@ -49,7 +49,7 @@ APIs. One of these checks will be to reject submissions with a Northern Ireland 
 
 **Context Element:** /CC313A
 
-**Scenario**: Each [Item number] is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from '1' for the first item and incrementing the numbering by '1' for each following item.
+**Scenario**: Each [Item number] is unique throughout the declaration The items shall be numbered in a sequential fashion, starting from '1' for the first item and incrementing the numbering by '1' for each following item.
 
 ---
 
@@ -1532,3 +1532,60 @@ APIs. One of these checks will be to reject submissions with a Northern Ireland 
 **Scenario**: [TIN] must begin with 'GB'.
 
 ---
+
+**ErrorCode: 8700**
+
+**Context Element:** /CC313A/TRACONCO1/NADLNGCO
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
+**ErrorCode: 8701**
+
+**Context Element:** /CC313A/TRACONCE1/NADLNGCE
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
+**ErrorCode: 8702**
+
+**Context Element:** /CC313A/NOTPAR670/NOTPAR670LNG
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
+**ErrorCode: 8703**
+
+**Context Element:** /CC313A/GOOITEGDS/TRACONCO2/NADLNGGTCO
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
+**ErrorCode: 8704**
+
+**Context Element:** /CC313A/GOOITEGDS/TRACONCE2/NADLNGGICE
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
+**ErrorCode: 8705**
+
+**Context Element:** /CC313A/GOOITEGDS/PRTNOT640/PRTNOT640LNG
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
+**ErrorCode: 8706**
+
+**Context Element:** /CC313A/TRACARENT601/TRACARENT601LNG
+
+**Scenario**: [Language] should not be present if GB [TIN] is present.
+
+---
+
