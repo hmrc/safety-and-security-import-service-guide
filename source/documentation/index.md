@@ -3,7 +3,7 @@ title: Safety and Security Import End-to-End Service Guide
 weight: 1
 description: Software developers, designers, product owners or business analysts.
 ---
-## From 1 January 2021 Traders who submit Entry Summary declarations (also known as an ENS) using third party software will need to enrol with the Safety and Security Great Britain (S&S GB) service.
+### From 1 January 2021 Traders who submit Entry Summary declarations (also known as an ENS) using third party software will need to enrol with the Safety and Security Great Britain (S&S GB) service.
 
 This guide explains how you can integrate your software with the S&S GB APIs:
 
