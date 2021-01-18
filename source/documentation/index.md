@@ -30,7 +30,7 @@ This guide explains how you can integrate your software with the S&S GB APIs:
 * retrieve a notification
 * acknowledge a notification
 
-### Safety and security import control entry summary declaration outcomes API
+### Safety and Security Import Outcomes API
 <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0">This API</a> will allow you to:
 
 * get a list of outcomes
