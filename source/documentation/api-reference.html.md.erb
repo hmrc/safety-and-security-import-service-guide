@@ -42,7 +42,6 @@ There is no SOAP header and the XML body envelope remains the same. It starts wi
 ```
 <ie:CC315A xmlns:ie="http://ics.dgtaxud.ec/CC315A">
    <MesSenMES3>GB1234231/1234567890</MesSenMES3>
-   <MesRecMES6>ABCD1234</MesRecMES6>
    <DatOfPreMES9>091231</DatOfPreMES9>
    <TimOfPreMES10>2359</TimOfPreMES10>
    <MesIdeMES19>ABCD1234</MesIdeMES19>
@@ -74,7 +73,6 @@ You can use this endpoint to submit an amendment to an existing ENS.
 ```
 <ie:CC313A xmlns:ie="http://ics.dgtaxud.ec/CC313A">
  <MesSenMES3>GBCD1234/1234567890</MesSenMES3>
- <MesRecMES6>GBC123</MesRecMES6>
  <DatOfPreMES9>030211</DatOfPreMES9>
  <TimOfPreMES10>0123</TimOfPreMES10>
  <MesIdeMES19>ABC123</MesIdeMES19>
@@ -260,7 +258,7 @@ The XML returned is the same as the current system. An example of a successful r
   <response>
     <cc3:CC351A>
       <MesSenMES3>GBCD1234/1234567890</MesSenMES3>
-      <MesRecMES6>GBC123</MesRecMES6>
+      <MesRecMES6>GBCD1234/1234567890</MesRecMES6>
       <DatOfPreMES9>030211</DatOfPreMES9>
       <TimOfPreMES10>0123</TimOfPreMES10>
       <MesIdeMES19>ABC123</MesIdeMES19>
