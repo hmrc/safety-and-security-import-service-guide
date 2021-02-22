@@ -96,3 +96,6 @@ Your application must comply with our [terms of use](https://developer.service.h
 * Change of name from Safety and Security to S&S GB
 * Requirement for traders to enrol with S&S GB
 
+### Version 1.5
+* Update IE313 and IE315 submission examples to reflect optional MesRecMES6 element
+* Fix MesRecMES6 format in example IE351 notification response
