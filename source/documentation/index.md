@@ -3,11 +3,16 @@ title: Safety and Security Import End-to-End Service Guide
 weight: 1
 description: Software developers, designers, product owners or business analysts.
 ---
+
+This guide explains how you can use our Safety and Security (S&S GB) APIs with your software to submit an Entry Summary declaration (also known as an ENS) to import goods into Great Britain.
+
+Our APIs will allow your software to submit Import Declarations and receive notifications and outcomes information.
+
 <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
-    From 1 January 2021 Traders who submit Entry Summary declarations (also known as an ENS) using third party software will need to enrol with the Safety and Security Great Britain (S&S GB) service.
+    From 1 January 2021 Traders who submit Entry Summary declarations using third party software will need to enrol with S&S GB.
   </strong>
 </div>
 
@@ -39,11 +44,10 @@ This guide explains how you can integrate your software with the S&S GB APIs:
 
 The response will also include a movement reference number.
 
-These APIs will receive new ENS submissions or amendments and will return a response or and error message for the end-user.
+These APIs will receive new ENS submissions or amendments and will return a response or an error message for the end-user.
 
 ## Overview
- 
-Traders importing goods into the UK must provide the UK customs authorities with advance information by submitting an ENS before bringing goods into the UK.
+Traders moving goods into Great Britain need to make an entry summary declaration. To submit the declaration traders must be registered with the S&S GB service.
 
 S&S GB handles digital communications between customs administrators and carriers (or their appointed representatives), and is designed to incorporate the:
 
@@ -58,8 +62,8 @@ The carrier or their authorised representative submitting the ENS must have a va
 
 For more information, see EORI Guidance pages on GOV.UK.
 
-S&S GB cannot be used for Entry Summary declarations where the office of first entry is a Northern Ireland port.
- 
+S&S GB cannot be used for entry summary declarations where the office of first entry is a Northern Ireland port.
+
 ## End-to-end user journeys
 
 These journeys show examples of use. Journeys for businesses and agents are broken down into:
@@ -78,7 +82,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 * [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
 
 * Additional information can be found at
- [Import Control System: support for software developers](https://www.gov.uk/government/collections/import-control-system-support-for-software-developers))
+  [Import Control System: support for software developers](https://www.gov.uk/government/collections/import-control-system-support-for-software-developers))
 
 <!-- add the change log here -->
 ## Changelog
@@ -90,7 +94,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 
 ### Version 1.3
 
-* ENS Validation added 
+* ENS Validation added
 
 ### Version 1.4
 * Change of name from Safety and Security to S&S GB
@@ -99,3 +103,5 @@ Your application must comply with our [terms of use](https://developer.service.h
 ### Version 1.5
 * Update IE313 and IE315 submission examples to reflect optional MesRecMES6 element
 * Fix MesRecMES6 format in example IE351 notification response
+* Rewording of Overview section
+* Revision of Field Details
