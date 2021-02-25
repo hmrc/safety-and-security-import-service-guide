@@ -4,32 +4,66 @@ weight: 1
 description: Software developers, designers, product owners or business analysts.
 ---
 
+This guide explains how you can use our Safety and Security (S&S GB) APIs with your software to submit an Entry Summary declaration (also known as an ENS) to import goods into Great Britain.
+
+Our APIs will allow your software to submit Import Declarations and receive notifications and outcomes information.
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    From 1 January 2021 Traders who submit Entry Summary declarations using third party software will need to enrol with S&S GB.
+  </strong>
+</div>
+
+This guide explains how you can integrate your software with the S&S GB APIs:
+
+* Safety and Security Import Declarations API
+* Safety and Security Import Notifications API
+* Safety and Security Import Control Entry Summary Declaration Outcomes API
+
+### Safety and Security Import Declarations API
+<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0">This API</a> allows you to:
+
+* create a new ENS submission
+* amend an existing ENS submission
+
+### Safety and Security Import Notifications API
+<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0">This API</a> allows you to:
+
+* get a list of notifications
+* retrieve a notification
+* acknowledge a notification
+
+### Safety and Security Import Outcomes API
+<a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0">This API</a> will allow you to:
+
+* get a list of outcomes
+* retrieve an outcome
+* acknowledge an outcome
+
+The response will also include a movement reference number.
+
+These APIs will receive new ENS submissions or amendments and will return a response or an error message for the end-user.
+
 ## Overview
- 
-This guide explains how you can integrate your software with our APIs to submit an import notification known as an Entry Summary Declaration (ENS).
+Traders moving goods into Great Britain need to make an entry summary declaration. To submit the declaration traders must be registered with the S&S GB service.
 
-It shows how the APIs fit into various end-to-end user journeys. It is also intended to help software developers, designers, product owners or business analysts understand how your software needs to interact with HMRC systems.
-
-The Safety and Security system handles digital communications between:
-
-* customs administrators
-* carriers or their appointed representatives
-
-You must provide the UK customs authorities with advance information by submitting an ENS before you bring goods into the UK.
-
-The Safety and Security system is designed to incorporate the:
+S&S GB handles digital communications between customs administrators and carriers (or their appointed representatives), and is designed to incorporate the:
 
 * lodging, handling and processing of the ENS in advance of the arrival of goods
 * issuing of a Movement Reference Number (MRN)
 
 The MRN is a Customs computer system-generated number that is automatically allocated after a successful validation. The MRN must be issued to the carrier and, where different, the declarant.
 
-The ENS must be lodged before goods arrive into the UK and before loading in the case of maritime deep-sea containerised shipping.
-The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number.  For more information, see [EORI Guidance](https://www.gov.uk/eori)</br>
+The ENS must be lodged before goods arrive into the UK, and before loading in the case of maritime deep-sea containerised shipping.
 
-> The Safety and Security system cannot be used for Entry Summary Declarations where the office of first entry is 
-> a Northern Ireland port.
- 
+The carrier or their authorised representative submitting the ENS must have a valid GB Economic Operator Registration and Identification (EORI) number.
+
+For more information, see EORI Guidance pages on GOV.UK.
+
+S&S GB cannot be used for entry summary declarations where the office of first entry is a Northern Ireland port.
+
 ## End-to-end user journeys
 
 These journeys show examples of use. Journeys for businesses and agents are broken down into:
@@ -48,7 +82,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 * [Create Test User API](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/api-platform-test-user/1.0)
 
 * Additional information can be found at
- [Import Control System: support for software developers](https://www.gov.uk/government/collections/import-control-system-support-for-software-developers))
+  [Import Control System: support for software developers](https://www.gov.uk/government/collections/import-control-system-support-for-software-developers))
 
 <!-- add the change log here -->
 ## Changelog
@@ -60,5 +94,14 @@ Your application must comply with our [terms of use](https://developer.service.h
 
 ### Version 1.3
 
-* ENS Validation added 
- 
+* ENS Validation added
+
+### Version 1.4
+* Change of name from Safety and Security to S&S GB
+* Requirement for traders to enrol with S&S GB
+
+### Version 1.5
+* Update IE313 and IE315 submission examples to reflect optional MesRecMES6 element
+* Fix MesRecMES6 format in example IE351 notification response
+* Rewording of Overview section
+* Revision of Field Details

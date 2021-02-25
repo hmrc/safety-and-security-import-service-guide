@@ -4,11 +4,8 @@ weight: 8
 ---
 
 <%= partial 'partials/google_tag_manager_js' %>
-<%= partial 'partials/google_tag_manager_non_js' %>
 
 # Validation (amended ENS)
-
-<%= partial 'partials/phase_banner' %>
 
 ## Types of validation
 When an ENS declaration amendment is submitted using the
@@ -16,7 +13,7 @@ When an ENS declaration amendment is submitted using the
 two types of validation are performed:
 
 1. The submission XML body is checked against the XML schema 
-[http://ics.dgtaxud.ec/CC313A](/api-documentation/docs/api/download/import-control-entry-declaration-store/1.0/schemas/CC313A-v11-1.xsd).
+[http://ics.dgtaxud.ec/CC313A](/api-documentation/docs/api/download/import-control-entry-declaration-store/1.0/schemas/CC313A-v11-2.xsd).
 2. The submission is checked against a number of business rules.
  
 Schema and business validation errors will result in a 400 (Bad Request) response to the submission with
