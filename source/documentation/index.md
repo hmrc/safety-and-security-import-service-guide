@@ -22,20 +22,20 @@ This guide explains how you can integrate your software with the S&S GB APIs:
 * Safety and Security Import Notifications API
 * Safety and Security Import Control Entry Summary Declaration Outcomes API
 
-### Safety and Security Import Declarations API
+## Safety and Security Import Declarations API
 <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-store/1.0">This API</a> allows you to:
 
 * create a new ENS submission
 * amend an existing ENS submission
 
-### Safety and Security Import Notifications API
+## Safety and Security Import Notifications API
 <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-intervention/1.0">This API</a> allows you to:
 
 * get a list of notifications
 * retrieve a notification
 * acknowledge a notification
 
-### Safety and Security Import Outcomes API
+## Safety and Security Import Outcomes API
 <a href="https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/import-control-entry-declaration-outcome/1.0">This API</a> will allow you to:
 
 * get a list of outcomes
