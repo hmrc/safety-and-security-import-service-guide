@@ -9,7 +9,7 @@ object AppDependencies {
     "uk.gov.hmrc" %% "bootstrap-frontend-play-28" % bootStrapPlayVersion)
 
   val test: Seq[ModuleID] = Seq(
-    "org.pegdown"            %  "pegdown"            % "1.6.0" % "test",
+//    "org.pegdown"            %  "pegdown"            % "1.6.0" % "test",
     "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % "test",
     "uk.gov.hmrc"            %% "bootstrap-test-play-28" % bootStrapPlayVersion % "test")
 }
