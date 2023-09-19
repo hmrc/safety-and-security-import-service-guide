@@ -18,4 +18,4 @@ gem 'mini_racer', platforms: :ruby
 # See: https://github.com/manastech/middleman-search/pull/24
 # gem 'middleman-search', git: 'https://github.com/alphagov/middleman-search'
 
-gem 'thin', '~> 1.7.0'
+gem 'thin', '~> 1.8.0'

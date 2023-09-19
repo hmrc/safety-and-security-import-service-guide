@@ -2,14 +2,14 @@ import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin.publishingSettings
 
 val appName = "safety-and-security-import-service-guide"
 
-val silencerVersion = "1.7.1"
+val silencerVersion = "1.17.13"
 
 lazy val microservice = Project(appName, file("."))
   .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)
   .settings(
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     majorVersion := 0,
-    scalaVersion := "2.12.12",
+    scalaVersion := "2.13.8",
     // ***************
     // Use the silencer plugin to suppress warnings from unused imports in compiled twirl templates
     scalacOptions ++= Seq("-feature"),
