@@ -1,4 +1,3 @@
-import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin.publishingSettings
 
 val appName = "safety-and-security-import-service-guide"
 
@@ -18,9 +17,6 @@ lazy val microservice = Project(appName, file("."))
       compilerPlugin("com.github.ghik" % "silencer-plugin" % silencerVersion cross CrossVersion.full),
       "com.github.ghik" % "silencer-lib" % silencerVersion % Provided cross CrossVersion.full
     )
-  )
-  .settings(
-    publishingSettings: _*
   )
   .settings(
     resolvers += Resolver.jcenterRepo
