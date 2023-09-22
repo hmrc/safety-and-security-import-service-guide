@@ -9,6 +9,7 @@ lazy val microservice = Project(appName, file("."))
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     majorVersion := 0,
     scalaVersion := "2.13.8",
+    PlayKeys.playDefaultPort := 4567,
     // ***************
     // Use the silencer plugin to suppress warnings from unused imports in compiled twirl templates
     scalacOptions ++= Seq("-feature"),
