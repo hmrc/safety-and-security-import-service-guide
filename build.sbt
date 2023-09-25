@@ -1,4 +1,3 @@
-import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin.publishingSettings
 
 val appName = "safety-and-security-import-service-guide"
 
@@ -10,6 +9,7 @@ lazy val microservice = Project(appName, file("."))
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     majorVersion := 0,
     scalaVersion := "2.13.8",
+    PlayKeys.playDefaultPort := 4567,
     // ***************
     // Use the silencer plugin to suppress warnings from unused imports in compiled twirl templates
     scalacOptions ++= Seq("-feature"),
@@ -18,9 +18,6 @@ lazy val microservice = Project(appName, file("."))
       compilerPlugin("com.github.ghik" % "silencer-plugin" % silencerVersion cross CrossVersion.full),
       "com.github.ghik" % "silencer-lib" % silencerVersion % Provided cross CrossVersion.full
     )
-  )
-  .settings(
-    publishingSettings: _*
   )
   .settings(
     resolvers += Resolver.jcenterRepo
