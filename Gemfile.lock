@@ -68,6 +68,10 @@ GEM
       concurrent-ruby (~> 1.0)
     kramdown (2.4.0)
       rexml
+    libv8-node (18.16.0.0)
+    libv8-node (18.16.0.0-arm64-darwin)
+    libv8-node (18.16.0.0-x86_64-darwin)
+    libv8-node (18.16.0.0-x86_64-linux)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -126,6 +130,8 @@ GEM
       middleman-core (>= 3.2)
       rouge (~> 3.2)
     mini_portile2 (2.8.5)
+    mini_racer (0.8.0)
+      libv8-node (~> 18.16.0.0)
     minitest (5.22.2)
     multi_json (1.15.0)
     nokogiri (1.16.2)
@@ -186,6 +192,7 @@ PLATFORMS
 
 DEPENDENCIES
   govuk_tech_docs
+  mini_racer
   thin (~> 1.8.0)
   tzinfo-data
   wdm (~> 0.1.0)
