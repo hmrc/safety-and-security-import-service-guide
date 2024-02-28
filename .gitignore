@@ -28,3 +28,4 @@ Staticfile.auth
 /logs
 .idea
 .bsp
+/.batect
