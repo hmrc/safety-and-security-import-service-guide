@@ -105,3 +105,10 @@ Your application must comply with our [terms of use](https://developer.service.h
 * Fix MesRecMES6 format in example IE351 notification response
 * Rewording of Overview section
 * Revision of Field Details
+
+### Version 1.6
+* The following fields are now optional (they are no longer mandatory):
+    - TotNumOfIteHEA305
+    - DecPlaHEA394
+    - AmdPlaHEA598
+
