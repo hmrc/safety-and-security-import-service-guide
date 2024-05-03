@@ -20,12 +20,13 @@ weight: 6
 <td>Message Sender</td>
 <td>MesSenMES3</td>
 <td>
-<p>The&nbsp;message&nbsp;sender&nbsp;field is made up of the&nbsp;sender&nbsp;EORI and branch. The branch is a 10 digit&nbsp;number.</p>
-<p>An EORI is made up a country code, to show where the organisation or individual is registered, and a unique code or&nbsp;number. <br/><br/>For&nbsp;UK&nbsp;businesses the&nbsp;number&nbsp;is made up as follows (with a few minor exceptions): </p>
+<p>The&nbsp;message&nbsp;sender&nbsp;field is made up of the&nbsp;sender&nbsp;EORI and branch. The Branch ID/Sub Office is a 10-digit number and is a required field for S&S GB messages. The Branch ID is a number that the trader adds and is not something HMRC provides.</p>
+<p>An EORI is made up of a country code, to show where the organisation or individual is registered, and a unique code or&nbsp;number. <br/><br/>For&nbsp;UK&nbsp;businesses the&nbsp;number&nbsp;is made up as follows (with a few minor exceptions): </p>
 <ul>
 <li>VAT registered businesses: GB + VRN (VAT&nbsp;registration number) + 000</li>
 <li>Non-VAT registered businesses: GB + unique&nbsp;number&nbsp;issued by HMRC</li>
 </ul>
+<p>The IE315 requires the MesSenMES3 field to be populated with an EORI/Branch ID combination similar to this: GB000000000012/0000000010</p>
 </td>
 </tr>
 <tr>
@@ -33,7 +34,7 @@ weight: 6
 <td>MesRecMES6</td>
 <td>
 <p>The&nbsp;message&nbsp;recipient&nbsp;field is optional and is made up of the&nbsp;recipient&nbsp;EORI and branch.<br/><br/>The branch is a 10 digit&nbsp;number.</p>
-<p>An EORI is made up a country code, to show where the organisation or individual is registered, and a unique code or&nbsp;number. <br/><br/>For&nbsp;UK&nbsp;businesses the&nbsp;number&nbsp;is made up as follows (with a few minor exceptions): </p>
+<p>An EORI is made up of a country code, to show where the organisation or individual is registered, and a unique code or&nbsp;number. <br/><br/>For&nbsp;UK&nbsp;businesses the&nbsp;number&nbsp;is made up as follows (with a few minor exceptions): </p>
 <ul>
 <li>VAT registered businesses: GB + VRN (VAT&nbsp;registration number) + 000</li>
 <li>Non-VAT registered businesses: GB + unique&nbsp;number&nbsp;issued by HMRC</li>
@@ -66,7 +67,7 @@ weight: 6
 <tr>
 <td>Message Type</td>
 <td>MesTypMES20</td>
-<td>This field will contain the CD (Common Domain) and number. It will be CD315A or CD313A.</td>
+<td>This field will contain the CD (Common Domain) and number. It will be CC315A or CC313A.</td>
 </tr>
 <tr>
 <td>Correlation Identifier</td>
@@ -80,12 +81,14 @@ weight: 6
 </td>
 <td>
 <p>Local Reference number - this field needs to be unique for each 'Person Lodging' and is validated using the 'Person Lodging' EORI for declarations which have been submitted.</p>
+<p>Must be unique per declarant submitting the declaration.</p>
+<p><b>Note:</b> Where an amendment is made, the MRN from the original declaration should be used.</p>
 </td>
 </tr>
 <tr>
 <td>Document/Reference Number</td>
 <td>DocNumHEA5</td>
-<td>This section contains the Movement Reference Number</td>
+<td>This section contains the Movement Reference Number. Field mandatory for Amendments only.</td>
 </tr>
 <tr>
 <td>Transport Mode at Border</td>
@@ -120,7 +123,7 @@ weight: 6
 <td>Nationality of Means of Transport Crossing Border</td>
 <td>NatOfMeaOfTraCroHEA87</td>
 <td>
-<p>Nationality of Means of Transport Crossing Border is a 'Country Code' if transport mode at border is one of the following:</p>
+<p>This optional field is a 'Country Code' if transport mode at border is one of the following:</p>
 <ul>
 <li>3 - Road</li>
 <li>10 - (NEW) RoRo &ndash; accompanied</li>
@@ -132,14 +135,14 @@ weight: 6
 <td>Total Number of Items</td>
 <td>TotNumOfIteHEA305</td>
 <td>
-<p>This field is to enter the total number of items. It must equal the total number of goods items provided and must not have leading zeros.</p>
+<p>This optional field is to enter the total number of items. If present, it must equal the total number of goods items provided and must not have leading zeros.</p>
 </td>
 </tr>
 <tr>
 <td>Total Number of Packages</td>
 <td>TotNumOfPacHEA306</td>
 <td>
-<p>Total Number of Packages is required when information on packages has been provided:</p>
+<p>This is an optional field. If present:</p>
 <ul>
 <li>this number must equal the sum of all 'Number of packages' +'Number of pieces' provided at goods item level + 1 for any declared as bulk</li>
 <li>this number must not have leading zeros</li>
@@ -157,13 +160,13 @@ weight: 6
 <td>Declaration Place</td>
 <td>DecPlaHEA394</td>
 <td>
-<p>This is a free text field used to enter where the declaration was submitted. This should be specific for example EU 'Country Name' rather than just entering 'EU'.</p>
+<p>This is an optional free text field, used to enter where the declaration was submitted. This should be specific for example EU 'Country Name' rather than just entering 'EU'.</p>
 </td>
 </tr>
 <tr>
 <td>Amendment place</td>
 <td>AmdPlaHEA598</td>
-<td>This is a free text description of where the declaration was submitted. This should be specific, for example EU country, not 'EU'</td>
+<td>This is an optional free text description of where the declaration was submitted. This should be specific, for example EU country, not 'EU'</td>
 </tr>
 <tr>
 <td>Amendment place LNG</td>
@@ -251,12 +254,16 @@ weight: 6
 <td>DecDatTimHEA114</td>
 <td>
 <p>This is for the date and time of the declaration submitted by the trader system and must by GMT (Greenwich Mean Time).</p>
+<p>The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ (for example: 2021-02-09T07:49:00.000Z)</p>
 </td>
 </tr>
 <tr>
 <td>Declaration Date and Time of Amendment</td>
 <td>DatTimAmeHEA113</td>
-<td>This is for the date and time of the declaration amendment submitted by the trader system and must be GMT (Greenwich Mean Time).</td>
+<td>
+<p>This is for the date and time of the declaration amendment submitted by the trader system and must be GMT (Greenwich Mean Time).</p>
+<p>The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ (for example: 2021-02-09T07:49:00.000Z)</p>
+</td>
 </tr>
 <tr>
 <td>---Consignor (Trader)</td>
@@ -1001,12 +1008,18 @@ weight: 6
 <tr>
 <td>Declaration Registration Date and Time</td>
 <td>DecRegDatTimHEA115</td>
-<td>This field is for the date and time the declaration is registered and must be in numeric format 00:00 00/00/0000.</td>
+<td>
+<p>This field is for the date and time the declaration is registered and must be in numeric format.</p>
+<p>The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ (for example: 2021-02-09T07:49:00.000Z)</p>
+</td>
 </tr>
 <tr>
 <td>Declaration Submitted Date and Time</td>
 <td>DecSubDatTimHEA118</td>
-<td>This field is for the date and time the declaration is submitted and must be in numeric format 00:00 00/00/0000.</td>
+<td>
+<p>This field is for the date and time the declaration is submitted and must be in numeric format.</p>
+<p> The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ  for example 2021-02-09T07:49:00.000Z</p>
+</td>
 </tr>
 <tr>
 <td>Item Number Concerned</td>

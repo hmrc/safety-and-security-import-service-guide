@@ -11,7 +11,4 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Include the tech docs gem
 gem 'govuk_tech_docs'
 
-# adding mini-racer
-gem 'mini_racer', platforms: :ruby
-
 gem 'thin', '~> 1.8.0'
