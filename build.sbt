@@ -6,7 +6,7 @@ lazy val microservice = Project(appName, file("."))
   .settings(
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     majorVersion := 0,
-    scalaVersion := "2.13.14",
+    scalaVersion := "2.13.15",
     PlayKeys.playDefaultPort := 4567,
     scalacOptions ++= Seq("-feature"),
     scalacOptions += "-Wconf:cat=unused-imports&src=routes/.*:s"
