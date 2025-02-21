@@ -106,6 +106,11 @@ Your application must comply with our [terms of use](https://developer.service.h
 <!-- add the change log here -->
 ## Changelog
 
+### Version 1.3
+
+* Corrected IDEMEATRAGI970 Field ID in XML reference
+* Added SEAID529 field, which was previously missing from XML reference
+
 ### Version 1.2
 
 * advanced notifications endpoints description and field descriptions added to service guide
