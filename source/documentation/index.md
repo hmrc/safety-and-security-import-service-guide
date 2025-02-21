@@ -106,11 +106,6 @@ Your application must comply with our [terms of use](https://developer.service.h
 <!-- add the change log here -->
 ## Changelog
 
-### Version 1.3
-
-* Corrected IDEMEATRAGI970 Field ID in XML reference
-* Added SEAID529 field, which was previously missing from XML reference
-
 ### Version 1.2
 
 * advanced notifications endpoints description and field descriptions added to service guide
@@ -132,3 +127,9 @@ Your application must comply with our [terms of use](https://developer.service.h
 
 ### Version 1.6
 * Changes ahead of 31 October 2024, where a reduced dataset will be introduced for ENS declarations, as set out in the Border Target Operating Model (BTOM) in August 2023.
+
+### Version 1.7
+
+* Corrected IDEMEATRAGI970 Field ID in XML reference
+* Added SEAID529 field, which was previously missing from XML reference
+
