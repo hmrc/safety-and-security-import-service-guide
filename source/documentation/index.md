@@ -133,3 +133,6 @@ Your application must comply with our [terms of use](https://developer.service.h
 * Corrected IDEMEATRAGI970 Field ID in XML reference
 * Added SEAID529 field, which was previously missing from XML reference
 
+### Version 1.8
+
+* Added type, length and requirement information to XML field descriptions.
