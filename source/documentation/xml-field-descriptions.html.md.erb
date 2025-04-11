@@ -367,6 +367,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
           <li>Must be provided by trader system</li>
           <li>This must be Greenwich Mean Time (GMT)</li>
         </ol>
+        <p>The timestamp in this format: YYYYMMDDHHMM (for example: 202102090749)</p>
       </td>
       <td>Numeric</td>
       <td>12-12 (YYYYMMDDHHMM)</td>
@@ -379,8 +380,8 @@ In the table below, the 'Requirement' column indicates whether the presence of a
         <p>This is for the date and time of the declaration amendment submitted by the trader system and must be GMT (Greenwich Mean Time).</p>
         <p>The timestamp in this format: YYYYMMDDHHMM (for example: 202102090749)</p>
       </td>
-      <td>Date-Time</td>
-      <td>24-24</td>
+      <td>Numeric</td>
+      <td>12-12 (YYYYMMDDHHMM)</td>
       <td>M</td>
     </tr>
     <tr>
@@ -1374,8 +1375,8 @@ In the table below, the 'Requirement' column indicates whether the presence of a
         </ul>
         <p>The scheduled date and time of arrival is a static reference point. It should be the same on all entry summary declarations submitted for consignments on that vessel, aircraft, train, or vehicle regardless of whether they are submitted by the carrier or by representatives on their behalf. <b>Representatives should, therefore, obtain this information from the carrier</b>.</p>
       </td>
-      <td>Date-Time</td>
-      <td>12-12</td>
+      <td>Numeric</td>
+      <td>12-12 (YYYYMMDDHHMM)</td>
       <td>M</td>
     </tr>
     <tr>
@@ -1473,28 +1474,6 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       </td>
       <td>String</td>
       <td>3-17</td>
-      <td>M</td>
-    </tr>
-    <tr>
-      <td>Declaration Registration Date and Time</td>
-      <td>DecRegDatTimHEA115</td>
-      <td>
-        <p>This field is for the date and time the declaration is registered and must be in numeric format.</p>
-        <p>The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ (for example: 2021-02-09T07:49:00.000Z)</p>
-      </td>
-      <td>Date-Time</td>
-      <td>24-24</td>
-      <td>M</td>
-    </tr>
-    <tr>
-      <td>Declaration Submitted Date and Time</td>
-      <td>DecSubDatTimHEA118</td>
-      <td>
-        <p>This field is for the date and time the declaration is submitted and must be in numeric format.</p>
-        <p>The timestamp in ISO8601 UTC format: YYYY-MM-DDThh:mm:ss.sssZ  for example 2021-02-09T07:49:00.000Z</p>
-      </td>
-      <td>Date-Time</td>
-      <td>24-24</td>
       <td>M</td>
     </tr>
     <tr>
