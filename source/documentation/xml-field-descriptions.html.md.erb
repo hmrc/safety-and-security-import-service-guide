@@ -134,7 +134,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Transport Mode at Border</td>
       <td>TraModAtBorHEA76</td>
       <td>
-        <p>Enter the appropriate mode of transport code corresponding to the active means of transport in which the goods are expected to enter the customs territory of the Community. See <a href="./mode-of-transport-code.html">Mode of Transport</a>.</p>
+        <p>Enter the appropriate mode of transport code corresponding to the active means of transport in which the goods are expected to enter the customs territory of the Community. See <a href="./appendix.html#mode-of-transport">Mode of Transport</a>.</p>
         <p>For all accompanied movements via the Channel Tunnel the appropriate mode of transport code is 3 (Road).</p>
         <p>Where air cargo is transported on modes of transport other than air, the other mode of transport shall be declared.</p>
         <p>However, IATA number must be completed in the <i>Conveyance Reference Number</i> field and Airway bill number must be provided in <i>Transport Document Number</i>.</p>
@@ -166,7 +166,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>IdeOfMeaOfTraCroHEA85LNG</td>
       <td>
         <p>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional.</p>
-        <p>If provided it must contain the language code of the language used in the corresponding free text field.</p>
+        <p>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</p>
       </td>
       <td>String</td>
       <td>0-2</td>
@@ -177,7 +177,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>NatOfMeaOfTraCroHEA87</td>
       <td>
         <p>Nationality of the active means of transport to be provided.</p>
-        <p>This optional field is a <a href="./country-code.html">Country Code</a> if transport mode at border is one of the following:</p>
+        <p>This optional field is a <a href="./appendix.html#country-code">Country Code</a> if transport mode at border is one of the following:</p>
         <ul>
           <li>3 - Road</li>
           <li>10 - Roll-on roll-off &#x2014; accompanied</li>
@@ -236,7 +236,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>DecPlaHEA394LNG</td>
       <td>
         <p>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional.</p>
-        <p>If provided it must contain the language code of the language used in the corresponding free text field</p>
+        <p>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</p>
       </td>
       <td>String</td>
       <td>0-2</td>
@@ -255,7 +255,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>AmdPlaHEA598LNG</td>
       <td>
         <p>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional.</p>
-        <p>If provided it must contain the language code of the language used in the corresponding free text field</p>
+        <p>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</p>
       </td>
       <td>String</td>
       <td>0-2</td>
@@ -265,7 +265,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Specific Circumstance Indicator</td>
       <td>SpeCirIndHEA1</td>
       <td>
-        <p>Refer to <a href="./specific-circumstance-indicator.html">Specific Circumstance Indicator</a> for the list of acceptable codes.</p>
+        <p>Refer to <a href="./appendix.html#specific-circumstance-indicator">Specific Circumstance Indicator</a> for the list of acceptable codes.</p>
         <p><b>Note:</b> The Specific Circumstance Indicator field has the following rules:</p>
         <ul>
           <li>value &#x2018;E&#x2019; (AEO) can be used only if the &#x2018;Person Lodging&#x2019; the Summary Declaration and all &#x2018;Consignees&#x2019; declared in it have a valid AEO certificate of type &#x2018;AEOF&#x2019; or &#x2018;AEOS&#x2019;</li>
@@ -281,7 +281,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Transport Charges Method of Payment</td>
       <td>TraChaMetOfPayHEA1</td>
       <td>
-        <p>Provide the relevant code specifying the payment method for transport charges. See <a href="./method-of-payment.html">Method of Payment</a>.</p>
+        <p>Provide the relevant code specifying the payment method for transport charges. See <a href="./appendix.html#method-of-payment">Method of Payment</a>.</p>
       </td>
       <td>String</td>
       <td>1-1</td>
@@ -326,7 +326,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
         <p>Place of Loading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are loaded onto the means of transport being used for their carriage, including the country where it is located.</p>
         <p>This must be provided at either Header or Item level. If provided at Header level, it cannot be provided at item level. If provided at item level, it must be provided for every item.</p>
         <ul>
-          <li>For unaccompanied goods the place of loading will be the port of departure. The first 2 digits of the place of loading shall be the Country Code from the code list, detailing the country where the goods were loaded onto the means of transport. See <a href="./country-code.html">Country Code</a>. This should be followed by the name of seaport, airport, freight terminal, rail station or other place at which goods are loaded onto the active means of transport that will cross the border. Format validation is limited to alphanumeric 35.</li>
+          <li>For unaccompanied goods the place of loading will be the port of departure. The first 2 digits of the place of loading shall be the Country Code from the code list, detailing the country where the goods were loaded onto the means of transport. See <a href="./appendix.html#country-code">Country Code</a>. This should be followed by the name of seaport, airport, freight terminal, rail station or other place at which goods are loaded onto the active means of transport that will cross the border. Format validation is limited to alphanumeric 35.</li>
           <li>For Accompanied RoRo and Road (Channel Tunnel) goods the place of loading is the Freight Terminal, Warehouse or Other place of loading onto the trailer/container which will be the active means of transport that will cross the border.  In these circumstances you should provide the first 2 digits of the Country code from the code list, followed by the name of the warehouse or other place and then the post code. Format validation is limited to alphanumeric 35.</li>
         </ul>
       </td>
@@ -340,7 +340,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>
         <p>Place of unloading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are unloaded.</p>
         <ul>
-          <li>For unaccompanied goods the place of unloading will be the port of arrival. The first 2 digits of the place of unloading shall be the Country Code from the code list, detailing the country where the goods will be unloaded from the means of transport. See <a href="./country-code.html">Country Code</a>. This must then be followed by the name of the seaport, airport, freight terminal, rail station or other place at which goods are unloaded from the active means of transport used for their carriage to be presented to customs. Format validation is limited to alphanumeric 35.</li>
+          <li>For unaccompanied goods the place of unloading will be the port of arrival. The first 2 digits of the place of unloading shall be the Country Code from the code list, detailing the country where the goods will be unloaded from the means of transport. See <a href="./appendix.html#country-code">Country Code</a>. This must then be followed by the name of the seaport, airport, freight terminal, rail station or other place at which goods are unloaded from the active means of transport used for their carriage to be presented to customs. Format validation is limited to alphanumeric 35.</li>
           <li>For Accompanied RoRo and Road (Channel Tunnel) goods the place of unloading is the Freight Terminal, Warehouse or Other place of unloading off the trailer/container which was the active means of transport at the border.  In these circumstances you should provide the first 2 digits of the Country Code from the Code list, followed by the name of the warehouse or other place and then the post code. Format validation is limited to alphanumeric 35.</li>
         </ul>
       </td>
@@ -432,7 +432,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>NAD LNG</td>
       <td>NADLNGCO</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field.</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -502,7 +502,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>NAD LNG</td>
       <td>NADLNGCE</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field.</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -570,7 +570,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Notify party NAD LNG</td>
       <td>NOTPAR670LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the language code of the language used in the corresponding free text field.</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -607,7 +607,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>
         <p>This is a plain language description precise enough for customs to be able to identify the goods without reference to other documents/materials.</p>
         <p>General terms such as 'consolidated', 'general cargo', 'parts' or 'miscellaneous' should not be provided. Providing an inaccurate or general description of the goods may lead to unnecessary delays, such as physical examinations of goods to ascertain their real nature.</p>
-        <p>For examples of terms that should be included, refer to <a href="./acceptable-goods-descriptions.html">Acceptable Goods Descriptions</a>. The tariff chapter heading should not be used as a substitute for a plain language goods description.</p>
+        <p>For examples of terms that should be included, refer to <a href="./appendix.html#acceptable-goods-descriptions">Acceptable Goods Descriptions</a>. The tariff chapter heading should not be used as a substitute for a plain language goods description.</p>
       </td>
       <td>String</td>
       <td>0-280</td>
@@ -617,7 +617,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Goods Description LNG</td>
       <td>GooDesGDS23LNG</td>
       <td>
-        <p>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the language code of the language used in the corresponding free text field (GooDesGDS23)</p>
+      <p>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field (GooDesGDS23)</p>
       </td>
       <td>String</td>
       <td>0-2</td>
@@ -697,7 +697,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Place of loading LNG</td>
       <td>PlaLoaGOOITE333LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the language code of the language used in the corresponding free text field.</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -713,7 +713,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Place of Unloading LNG</td>
       <td>PlaUnlGOOITE333LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -733,7 +733,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Document Type</td>
       <td>DocTypDC21</td>
-      <td>Specifies the document type. See <a href="./document-type.html">Document Type</a>.</td>
+      <td>Specifies the document type. See <a href="./appendix.html#document-type">Document Type</a>.</td>
       <td>String</td>
       <td>0-4</td>
       <td>M</td>
@@ -751,7 +751,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Document Reference LNG</td>
       <td>DocRefDCLNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -759,7 +759,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>&#x2014;&#x2014;Special Mentions</td>
       <td>SPEMENMT2</td>
-      <td>You should refer to <a href="./additional-information.html">Additional Information</a>, and enter the relevant code.</td>
+      <td>You should refer to <a href="./appendix.html#additional-information">Additional Information</a>, and enter the relevant code.</td>
       <td>Complex object</td>
       <td> </td>
       <td>O</td>
@@ -833,7 +833,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Cosigner NAD LNG</td>
       <td>NADLNGGTCO</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -925,7 +925,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Consignee NAD LNG</td>
       <td>NADLNGGICE</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -993,7 +993,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Identity of Means of Transport Crossing Border LNG</td>
       <td>IdeMeaTraGIMEATRA972LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1009,7 +1009,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Kind of Packages</td>
       <td>KinOfPacGS23</td>
-      <td>Specify the appropriate package type from the list of available codes found in <a href="./kinds-of-package.html">Kinds of Package</a>.</td>
+      <td>Specify the appropriate package type from the list of available codes found in <a href="./appendix.html#kinds-of-package">Kinds of Package</a>.</td>
       <td>String</td>
       <td>0-2</td>
       <td>M</td>
@@ -1054,7 +1054,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Marks &amp; Numbers of packages (long) LNG</td>
       <td>MarNumOfPacGSL21LNG</td>
-      <td>This data item must be entered if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If the data item is filled in, it must contain the language code of the language used in the corresponding free text field.</td>
+      <td>This data item must be entered if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If the data item is filled in, it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1116,7 +1116,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Notify Party NAD LNG</td>
       <td>PRTNOT640LNG</td>
-      <td>This data item must be entered if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If the data item is filled in, it must contain the language code of the language used in the corresponding free text field.</td>
+      <td>This data item must be entered if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If the data item is filled in, it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field.</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1141,7 +1141,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Country of Routing Code</td>
       <td>CouOfRouCodITI1</td>
       <td>
-        <p>You must provide, in chronological order, the countries through which the goods are routed between the country of original departure and the country of final destination. The countries must be entered in the appropriate country code format. See <a href="./country-code.html">Country Code</a>.</p>
+        <p>You must provide, in chronological order, the countries through which the goods are routed between the country of original departure and the country of final destination. The countries must be entered in the appropriate country code format. See <a href="./appendix.html#country-code">Country Code</a>.</p>
         <p><b>Note:</b> As this information is only collected at header level it is important that all consignments included in the declaration have followed the same routing.</p>
         <p>The country routing list should include the countries of departure and destination.</p>
       </td>
@@ -1216,7 +1216,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Representative Trader NAD LNG</td>
       <td>TRAREPLNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1283,7 +1283,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Lodging person NAD LNG</td>
       <td>PERLODSUMDECLNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1320,7 +1320,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Seals Identity LNG</td>
       <td>SeaIdSEAID530LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1445,7 +1445,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Entry Carrier NAD LNG</td>
       <td>TRACARENT601LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/>If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
@@ -1506,7 +1506,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Customs Intervention LNG</td>
       <td>CusIntTexCUSINT667LNG</td>
-      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the language code of the language used in the corresponding free text field</td>
+      <td>This must be provided if the message is encoded in EDIFACT and the corresponding free text field is not in the UNOC character set. It is otherwise optional. <br/> If provided it must contain the <a href="./appendix.html#language-code">language code</a> of the language used in the corresponding free text field</td>
       <td>String</td>
       <td>2-2</td>
       <td>O</td>
