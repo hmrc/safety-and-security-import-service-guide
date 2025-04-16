@@ -136,3 +136,4 @@ Your application must comply with our [terms of use](https://developer.service.h
 ### Version 1.8
 
 * Added type, length and requirement information to XML field descriptions.
+* Added an Appendix, which contains code lookup tables.
