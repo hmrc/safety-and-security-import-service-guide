@@ -9,7 +9,7 @@ weight: 6
 
 ## Field descriptions
 
-In the table below, the 'Requirement' column indicates whether the presence of a data class/element is necessary:
+In the table below, the 'Requirement' column indicates whether the presence of a data class/element is necessary when submitting Entry Summary Declarations:
 
 * **M** - Mandatory (must always be provided)
 * **O** - Optional (must be provided if available)
@@ -1466,6 +1466,28 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>String</td>
       <td>3-17</td>
       <td>M</td>
+    </tr>
+    <tr>
+      <td>Declaration Registration Date and Time</td>
+      <td>DecRegDatTimHEA115</td>
+      <td>
+        <p>The date and time that the declaration was registered.</p>
+        <p>The timestamp in this format: YYYYMMDDHHMM (for example: 202102090749)</p>
+      </td>
+      <td>Numeric</td>
+      <td>12-12 (YYYYMMDDHHMM)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Declaration Submitted Date and Time</td>
+      <td>DecSubDatTimHEA118</td>
+      <td>
+        <p>The date and time the that declaration was submitted.</p>
+        <p>The timestamp in this format: YYYYMMDDHHMM (for example: 202102090749)</p>
+      </td>
+      <td>Numeric</td>
+      <td>12-12 (YYYYMMDDHHMM)</td>
+      <td>-</td>
     </tr>
     <tr>
       <td>Item Number Concerned</td>
