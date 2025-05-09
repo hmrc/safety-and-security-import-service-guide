@@ -9,7 +9,7 @@ weight: 6
 
 ## Field descriptions
 
-In the table below, the 'Requirement' column indicates whether the presence of a data class/element is necessary when submitting Entry Summary Declarations:
+In the table below, the 'Requirement' column indicates whether the presence of a data class/element is necessary when submitting Entry Summary Declarations (where applicable), or whether it is always present in a notification or outcome:
 
 * **M** - Mandatory (must always be provided)
 * **O** - Optional (must be provided if available)
@@ -139,7 +139,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
         <p>Where air cargo is transported on modes of transport other than air, the other mode of transport shall be declared.</p>
         <p>However, IATA number must be completed in the <i>Conveyance Reference Number</i> field and Airway bill number must be provided in <i>Transport Document Number</i>.</p>
       </td>
-      <td>String</td>
+      <td>Numeric</td>
       <td>1-2</td>
       <td>M</td>
     </tr>
@@ -1476,7 +1476,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       </td>
       <td>Numeric</td>
       <td>12-12 (YYYYMMDDHHMM)</td>
-      <td>-</td>
+      <td>M</td>
     </tr>
     <tr>
       <td>Declaration Submitted Date and Time</td>
@@ -1487,11 +1487,11 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       </td>
       <td>Numeric</td>
       <td>12-12 (YYYYMMDDHHMM)</td>
-      <td>-</td>
+      <td>M</td>
     </tr>
     <tr>
       <td>Item Number Concerned</td>
-      <td>IteNumConCusINT668</td>
+      <td>IteNumConCUSINT668</td>
       <td>
         <p>This relates to the item number concerned in the declaration.</p>
         <p>Items will be numbered sequentially from &#x2018;1&#x2019; for the first item and incrementing the numbering by &#x2018;1&#x2019; for each following item.</p>
@@ -1505,7 +1505,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
           </ul>
         </ul>
       </td>
-      <td>String</td>
+      <td>Numeric</td>
       <td>0-5</td>
       <td>M</td>
     </tr>
