@@ -13,11 +13,11 @@ Our APIs will allow your software to submit ENS Declarations and receive notific
   <strong class="govuk-warning-text__text">
     <span class="govuk-warning-text__assistive">Warning</span>
     Traders who submit ENS declarations using third party software will need to enrol with S&S GB.<br><br>
-    From 31 October 2024, a reduced dataset will be introduced for ENS declarations, as set out in the <a href="https://www.gov.uk/government/publications/the-border-target-operating-model-august-2023">Border Target Operating Model (BTOM)</a> in August 2023. 
+    From 31 October 2024, a reduced dataset was introduced for ENS declarations, as set out in the <a href="https://www.gov.uk/government/publications/the-border-target-operating-model-august-2023">Border Target Operating Model (BTOM)</a> in August 2023. 
   </strong>
 </div>
 
-The reduced dataset will consist of 20 mandatory fields, up to 8 conditional fields (which need to be completed in certain circumstances), and 9 optional data fields. Further information on the reduced dataset can be found [here](https://assets.publishing.service.gov.uk/media/64f6e2629ee0f2000db7be8e/Final_Border_Target_Operating_Model.pdf) within Annex A.
+The reduced dataset consists of 20 mandatory fields, up to 8 conditional fields (which need to be completed in certain circumstances), and 9 optional data fields. Further information on the reduced dataset can be found [here](https://assets.publishing.service.gov.uk/media/64f6e2629ee0f2000db7be8e/Final_Border_Target_Operating_Model.pdf) within Annex A.
 
 * Businesses that are already set up to submit ENS declarations may choose to complete only the mandatory and any relevant conditional fields, but they do not need to make any changes to their existing systems or procedures if they do not wish to.
 * Those who are preparing to complete ENS declarations for the first time will be able to choose to complete only the mandatory and any relevant conditional fields.
@@ -133,3 +133,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 * Corrected IDEMEATRAGI970 Field ID in XML reference
 * Added SEAID529 field, which was previously missing from XML reference
 
+### Version 1.8
+
+* Added type, length and requirement information to XML field descriptions.
+* Added an Appendix, which contains code lookup tables.
