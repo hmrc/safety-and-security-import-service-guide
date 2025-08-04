@@ -522,6 +522,8 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>NOTPAR670</td>
       <td>
         <p>This section relates to the &#x2018;Notify Party&#x2019; that is the party who needs to be notified of the arrival of the goods. This information needs to be provided if applicable.</p>
+        <p>If the party to be notified has an EORI or Trader Identification Number (TIN) is held, this should also be provided.</p>
+        <p>If a GB EORI is provided, the name and address fields are not required and must not be supplied.</p>
       </td>
       <td>Complex Object</td>
       <td> </td>
@@ -533,7 +535,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party name</td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Street and Number</td>
@@ -541,7 +543,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Street and Number</td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Postal Code</td>
@@ -549,7 +551,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Postal Code</td>
       <td>String</td>
       <td>0-9</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>City</td>
@@ -557,7 +559,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party City</td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Country Code</td>
@@ -565,7 +567,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Country Code</td>
       <td>String</td>
       <td>2-2</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Notify party NAD LNG</td>
@@ -1067,7 +1069,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
         <p>Where the goods are carried under a negotiable bill of lading that is &#x2018;to order blank endorsed&#x2019;, in which case the consignee is not mentioned and special mentions code 10600 (from code list) is entered, the Notify Party shall always be provided.</p>
         <p>The notify party address must be provided and in the following format: Name/ Company, Building Number, Street, Town, Region, Postcode, Country.</p>
         <p>If the party to be notified has an EORI or Trader Identification Number (TIN) is held, this should also be provided.</p>
-        <p>If a GB EORI is provided, the name and address becomes an optional element.</p>
+        <p>If a GB EORI is provided, the name and address fields are not required and must not be supplied.</p>
       </td>
       <td>Complex Object</td>
       <td> </td>
@@ -1079,7 +1081,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Name</td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Street and Number</td>
@@ -1087,7 +1089,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Street and Number</td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Postal Code</td>
@@ -1095,7 +1097,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Postal Code</td>
       <td>String</td>
       <td>0-9</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>City</td>
@@ -1103,7 +1105,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party City</td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Country Code</td>
@@ -1111,7 +1113,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>Notify Party Country Code</td>
       <td>String</td>
       <td>2-2</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Notify Party NAD LNG</td>
