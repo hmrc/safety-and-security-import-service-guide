@@ -137,3 +137,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 
 * Added type, length and requirement information to XML field descriptions.
 * Added an Appendix, which contains code lookup tables.
+
+### Version 1.9
+
+* Updated descriptions of the PRTNOT640 and NOTPAR670 fields to specify that the address-related child fields must not be provided if the 'Notify Party' has a GB EORI.
