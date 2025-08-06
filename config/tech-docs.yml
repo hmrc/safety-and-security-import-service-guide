@@ -3,6 +3,7 @@ service_name: Safety and security import declarations service guide
 
 # The route that will be used to access this site (with tailing slash)
 service_link: /guides/safety-and-security-import-declarations-end-to-end-service-guide/
+use_service_link_for_favicon: true
 
 # ================================================
 # You shouldn't need to edit anything below here
@@ -17,7 +18,8 @@ show_govuk_logo: true
 # Links to show on right-hand-side of header
 header_links:
   Developer Hub: https://developer.service.hmrc.gov.uk
-  Documentation: https://developer.service.hmrc.gov.uk/api-documentation/docs/using-the-hub
+  Getting started: https://developer.service.hmrc.gov.uk/api-documentation/docs/using-the-hub
+  API documentation: https://developer.service.hmrc.gov.uk/api-documentation/docs/api
   Applications: https://developer.service.hmrc.gov.uk/developer/applications
   Support: https://developer.service.hmrc.gov.uk/developer/support
 
@@ -26,9 +28,6 @@ footer_links:
 
 # Enables search functionality. This indexes pages only and is not recommended for single-page sites.
 enable_search: false
-
-# Tracking ID from Google Analytics (e.g. UA-XXXX-Y)
-ga_tracking_id:
 
 # Enables the tracking consent banner
 tracking_consent_frontend:
@@ -50,4 +49,3 @@ max_toc_heading_level: 2
 prevent_indexing: false
 
 show_contribution_banner: false
-github_repo: hmrc/safety-and-security-import-service-guide.git
