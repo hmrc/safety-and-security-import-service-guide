@@ -1,16 +1,25 @@
-
 val appName = "safety-and-security-import-service-guide"
 
+scalaVersion := "2.13.16"
+
+ThisBuild / libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % VersionScheme.Always
+ThisBuild / semanticdbEnabled := true
+ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
+
 lazy val microservice = Project(appName, file("."))
-  .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)
+  .enablePlugins(PlayScala, SbtDistributablesPlugin)
+  .disablePlugins(JUnitXmlReportPlugin)
   .settings(
-    libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
     majorVersion := 0,
-    scalaVersion := "2.13.16",
-    PlayKeys.playDefaultPort := 4567,
-    scalacOptions ++= Seq("-feature"),
-    scalacOptions += "-Wconf:cat=unused-imports&src=routes/.*:s"
+    libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
+    update / evictionWarningOptions := EvictionWarningOptions.default.withWarnScalaVersionEviction(false)
   )
+  .settings(scalacOptions ++= Seq("-language:postfixOps"))
   .settings(
-    resolvers += Resolver.jcenterRepo
+    scalacOptions ++= Seq(
+      "-Wconf:cat=unused&src=views/.*\\.scala:s",
+      "-Wconf:cat=unused&src=.*RoutesPrefix\\.scala:s",
+      "-Wconf:cat=unused&src=.*Routes\\.scala:s",
+      "-Wconf:cat=unused&src=.*ReverseRoutes\\.scala:s"
+    )
   )
