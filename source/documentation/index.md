@@ -141,3 +141,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 ### Version 1.9
 
 * Updated descriptions of the PRTNOT640 and NOTPAR670 fields to specify that the address-related child fields must not be provided if the 'Notify Party' has a GB EORI.
+
+### Version 1.10
+
+* Updated descriptions of the PlaLoaGOOITE334, PlaUnlGOOITE334, PlaLoaGOOITE333 and PlaUnlGOOITE333 fields to clarify that they are conditional.
