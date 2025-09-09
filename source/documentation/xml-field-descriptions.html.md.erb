@@ -324,7 +324,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       <td>PlaLoaGOOITE334</td>
       <td>
         <p>Place of Loading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are loaded onto the means of transport being used for their carriage, including the country where it is located.</p>
-        <p>This must be provided at either Header or Item level. If provided at Header level, it cannot be provided at item level. If provided at item level, it must be provided for every item.</p>
+        <p>This must be provided at either header or item level. If provided at header level, it cannot be provided at item level. If provided at item level, it must be provided for every item.</p>
         <ul>
           <li>For unaccompanied goods the place of loading will be the port of departure. The first 2 digits of the place of loading shall be the Country Code from the code list, detailing the country where the goods were loaded onto the means of transport. See <a href="./appendix.html#country-code">Country Code</a>. This should be followed by the name of seaport, airport, freight terminal, rail station or other place at which goods are loaded onto the active means of transport that will cross the border. Format validation is limited to alphanumeric 35.</li>
           <li>For Accompanied RoRo and Road (Channel Tunnel) goods the place of loading is the Freight Terminal, Warehouse or Other place of loading onto the trailer/container which will be the active means of transport that will cross the border.  In these circumstances you should provide the first 2 digits of the Country Code from the code list, followed by the name of the warehouse or other place and then the post code. Format validation is limited to alphanumeric 35.</li>
@@ -332,13 +332,14 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       </td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Place of Unloading</td>
       <td>PlaUnlGOOITE334</td>
       <td>
         <p>Place of unloading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are unloaded.</p>
+        <p>This must be provided at either header or item level. If provided at header level, it cannot be provided at item level. If provided at item level, it must be provided for every item.</p>
         <ul>
           <li>For unaccompanied goods the place of unloading will be the port of arrival. The first 2 digits of the place of unloading shall be the Country Code from the code list, detailing the country where the goods will be unloaded from the means of transport. See <a href="./appendix.html#country-code">Country Code</a>. This must then be followed by the name of the seaport, airport, freight terminal, rail station or other place at which goods are unloaded from the active means of transport used for their carriage to be presented to customs. Format validation is limited to alphanumeric 35.</li>
           <li>For Accompanied RoRo and Road (Channel Tunnel) goods the place of unloading is the Freight Terminal, Warehouse or Other place of unloading off the trailer/container which was the active means of transport at the border.  In these circumstances you should provide the first 2 digits of the Country Code from the Code list, followed by the name of the warehouse or other place and then the post code. Format validation is limited to alphanumeric 35.</li>
@@ -346,7 +347,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
       </td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Declaration Date and Time</td>
@@ -689,12 +690,12 @@ In the table below, the 'Requirement' column indicates whether the presence of a
         <p>Place of Loading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are loaded onto the means of transport being used for their carriage, including the country where it is located:</p>
         <ul>
           <li>where available, coded information should be provided for the identification of the location, that is the first 2 digits country code, followed by port code, but format validation limited to Alpha Numeric 35</li>
-          <li>this must be provided at either Header or Item level. If provided at Header level, it cannot be provided at item level. If provided at item level, it must be provided for every item</li>
+          <li>this must be provided at either header or item level. If provided at header level, it cannot be provided at item level. If provided at item level, it must be provided for every item</li>
         </ul>
       </td>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Place of loading LNG</td>
@@ -707,10 +708,15 @@ In the table below, the 'Requirement' column indicates whether the presence of a
     <tr>
       <td>Place of Unloading</td>
       <td>PlaUnlGOOITE333</td>
-      <td>Place of unloading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are unloaded.<br/> Where available, coded information should be provided for the identification of the location, i.e. first 2 digits country code, followed by port code, but format validation limited to Alpha Numeric 35</td>
+      <td>
+      <p>Place of unloading is used for the identification of the seaport, airport, freight terminal, rail station or other place at which the goods are unloaded.</p>
+        <ul>
+          <li>where available, coded information should be provided for the identification of the location, that is the first 2 digits country code, followed by port code, but format validation limited to Alpha Numeric 35</li>
+          <li>this must be provided at either header or item level. If provided at header level, it cannot be provided at item level. If provided at item level, it must be provided for every item</li>
+        </ul>
       <td>String</td>
       <td>0-35</td>
-      <td>M</td>
+      <td>C</td>
     </tr>
     <tr>
       <td>Place of Unloading LNG</td>
@@ -978,7 +984,7 @@ In the table below, the 'Requirement' column indicates whether the presence of a
           <li>10 - (NEW) RoRo &#x2013; accompanied</li>
           <li>11 - (NEW) RoRo &#x2013; unaccompanied</li>
         </ul>
-        <p>This is not required if &#x2018;Identity of means of transport&#x2019; is provided at the Header level.</p>
+        <p>This is not required if &#x2018;Identity of means of transport&#x2019; is provided at the header level.</p>
       </td>
       <td>String</td>
       <td>2-2</td>
