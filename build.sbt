@@ -23,3 +23,5 @@ lazy val microservice = Project(appName, file("."))
       "-Wconf:cat=unused&src=.*ReverseRoutes\\.scala:s"
     )
   )
+
+addCommandAlias("runAllChecks", ";clean;compile;scalafmt;coverage;test;coverageReport")
