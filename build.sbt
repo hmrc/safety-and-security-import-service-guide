@@ -1,6 +1,6 @@
 val appName = "safety-and-security-import-service-guide"
 
-scalaVersion := "2.13.16"
+scalaVersion := "2.13.18"
 
 ThisBuild / libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % VersionScheme.Always
 ThisBuild / semanticdbEnabled := true
