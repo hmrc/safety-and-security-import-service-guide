@@ -145,3 +145,7 @@ Your application must comply with our [terms of use](https://developer.service.h
 ### Version 1.10
 
 * Updated descriptions of the PlaLoaGOOITE334, PlaUnlGOOITE334, PlaLoaGOOITE333 and PlaUnlGOOITE333 fields to clarify that they are conditional.
+
+### Version 1.11
+
+* Updated [Acceptable Goods Descriptions](documentation/appendix.html#acceptable-goods-descriptions) table.
