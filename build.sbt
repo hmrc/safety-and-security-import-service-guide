@@ -1,6 +1,6 @@
 val appName = "safety-and-security-import-service-guide"
 
-scalaVersion := "2.13.18"
+scalaVersion := "3.3.7"
 
 ThisBuild / libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % VersionScheme.Always
 ThisBuild / semanticdbEnabled := true
@@ -21,5 +21,6 @@ lazy val microservice = Project(appName, file("."))
       "-Wconf:cat=unused&src=.*RoutesPrefix\\.scala:s",
       "-Wconf:cat=unused&src=.*Routes\\.scala:s",
       "-Wconf:cat=unused&src=.*ReverseRoutes\\.scala:s"
-    )
+    ),
+    scalacOptions ~= (_.filterNot(_ == "utf8").distinct)
   )
